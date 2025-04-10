@@ -1,0 +1,32 @@
+# OS system files
+.DS_Store
+Thumbs.db
+
+# IDE configs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build output
+dist/
+build/
+
+# Dependency folders
+node_modules/
+
+# Log files
+*.log
+npm-debug.log
+yarn-error.log
+
+# Env files
+.env
+
+# Temporary or backup files
+*.temp
+*.bak
+
+# Custom folders
+uploads/
+logs/
