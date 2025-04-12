@@ -20,6 +20,12 @@ body {
     background-attachment: fixed;
 }
 
+@media (hover: none) and (pointer: coarse) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
 h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     color: rgb(255, 255, 255);
 }
