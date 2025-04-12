@@ -20,7 +20,7 @@ body {
     background-attachment: fixed;
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 1025px) {
     body {
         background-attachment: scroll;
     }
