@@ -13,21 +13,24 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (min-width: 1025px) {
-    body {
-        background: url(../images/backgroundSkull.jpeg) no-repeat;
-        background-size: 40rem;
-        background-position: center;
-        background-attachment: fixed;
-    }
+body {
+    background: url(../images/backgroundSkull.jpeg) no-repeat;
+    background-size: 40rem;
+    background-position: center;
+    background-attachment: fixed;
 }
-@media (max-width: 1025px) {
-    body {
-        background: url(../images/backgroundSkull.jpeg) no-repeat;
-        background-size: 40rem;
-        background-position: center;
-        background-attachment: scroll;
-    }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/backgroundSkull.jpeg) no-repeat;
+    background-size: 40rem;
+    z-index: -1;
+    pointer-events: none;
 }
 
 h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
