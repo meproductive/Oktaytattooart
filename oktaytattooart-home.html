@@ -17,62 +17,72 @@
 
     <body>
 
-        <!--SOCIAL ICON MENU SECTION-->
+        <div id="custom-background"></div>
 
-        <aside id="primary-social">
-            <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
-                <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
-                <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
-                <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
-            </ul>
-        </aside>
+        <div id="page-content">
 
-        <!--SOCIAL ICON MENU SECTION-->
+            <div class="d-flex-column" id="hero">
 
-        <!--HEADER NAVIGATION SECTION-->
+                <!--SOCIAL ICON MENU SECTION-->
 
-        <header class="d-flex a-items-center" id="header">
-            <h1 id="main-title"><strong>oktaytattooart</strong></h1>
-            <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
-                <ul class="d-flex" id="menu">
-                    <li><a href="oktaytattooart-home.html">HOME</a></li>
-                    <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
-                    <li><a href="tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-            </nav>
-            <i class="d-flex a-items-center" id="menu-button"><span id="hamburger-menu"></span></i>
-        </header>
+                <aside id="primary-social">
+                    <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
+                        <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
+                        <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
+                        <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
+                    </ul>
+                </aside>
+            
+                <!--SOCIAL ICON MENU SECTION-->
+            
+                <!--HEADER NAVIGATION SECTION-->
+            
+                <header class="d-flex a-items-center" id="header">
+                    <h1 id="main-title"><strong>oktaytattooart</strong></h1>
+                    <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
+                        <ul class="d-flex" id="menu">
+                            <li><a href="oktaytattooart-home.html">HOME</a></li>
+                            <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
+                            <li><a href="tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                    <i class="d-flex a-items-center" id="menu-button"><span id="hamburger-menu"></span></i>
+                </header>
 
+                <!--HEADER NAVIGATION SECTION-->
 
-        <!--HEADER NAVIGATION SECTION-->
+                
+                <!--VIDEO OVERLAY CONTENT-->
+                
+                <section class="intro d-flex p-relative top-0 color-f" id="intro">
+                    <figure class="d-flex p-absolute top-0 wh-100" id="video-container">
+                        <video class="p-relative wh-100" id='introVideo' src="resources/videos/introWithSound.mp4" autoplay loop playsinline muted></video>
+                    </figure>
+                    <article class="d-flex-column content-items-center p-relative wh-100" id="main-article-content">
+                        <a href="appointment.html" class="p-absolute" id="glassy-button">Appointment</a>
+                        <blockquote class="d-flex-column p-absolute">
+                            <strong class="opacity-animation">Ink</strong>
+                            <strong class="opacity-animation">is</strong>
+                            <strong class="opacity-animation">what makes</strong>
+                            <strong class="opacity-animation">you</strong>
+                            <strong class="opacity-animation">different!</strong>
+                            <strong class="opacity-animation"><a href="#howtocare">Learn how to take care of it better!</a></strong>
+                        </blockquote>
+                    </article>
+                    <i class="fa-solid fa-volume-xmark sound-icon" id="turnSoundOff"></i>
+                    <i class="fa-solid fa-volume-high sound-icon" id="turnSoundOn"></i>
+                </section>
+            
+                <!--VIDEO OVERLAY CONTENT-->
+
+            </div>
+            
+       
 
         <!--MAIN CONTENT SECTION-->
 
         <main id="home-main" role="main">
-
-            <!--VIDEO OVERLAY CONTENT-->
-
-            <section class="intro d-flex p-relative top-0 color-f" id="intro">
-                <figure class="d-flex p-absolute top-0 wh-100" id="video-container">
-                    <video class="p-relative wh-100" id='introVideo' src="resources/videos/introWithSound.mp4" autoplay loop playsinline muted></video>
-                </figure>
-                <article class="d-flex-column content-items-center p-relative wh-100" id="main-article-content">
-                    <a href="appointment.html" class="p-absolute" id="glassy-button">Appointment</a>
-                    <blockquote class="d-flex-column p-absolute">
-                        <strong class="opacity-animation">Ink</strong>
-                        <strong class="opacity-animation">is</strong>
-                        <strong class="opacity-animation">what makes</strong>
-                        <strong class="opacity-animation">you</strong>
-                        <strong class="opacity-animation">different!</strong>
-                        <strong class="opacity-animation"><a href="#howtocare">Learn how to take care of it better!</a></strong>
-                    </blockquote>
-                </article>
-                <i class="fa-solid fa-volume-xmark sound-icon" id="turnSoundOff"></i>
-                <i class="fa-solid fa-volume-high sound-icon" id="turnSoundOn"></i>
-            </section>
-
-            <!--VIDEO OVERLAY CONTENT-->
 
              <!--TITLE CONTENT-->
 
@@ -336,10 +346,10 @@
 
             <!--FOOTER CONTENT SECTION-->
 
-        </main>
-
         <!--MAIN CONTENT SECTION-->
 
+        </div>
+        
         
     </body>
 

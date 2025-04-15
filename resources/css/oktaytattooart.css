@@ -13,24 +13,25 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background: url(../images/backgroundSkull.jpeg) no-repeat;
-    background-size: 40rem;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-body::before {
-    content: "";
+#custom-background {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url(../images/backgroundSkull.jpeg) no-repeat;
+    width: 100%;
+    height: 100%;
+    background: url(../images/backgroundSkull.jpeg) no-repeat center center;
     background-size: 40rem;
     z-index: -1;
     pointer-events: none;
+}
+
+#page-content {
+    position: relative;
+    z-index: 1;
+}
+
+#hero {
+    height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
@@ -112,10 +113,8 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 #primary-social {
     background-color: transparent;
     z-index: 998;
-    position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
 }
 
 #icon-menu li a i {
@@ -155,18 +154,12 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 
 #header {
     justify-content: space-between;
-    position: absolute;
-    padding: 0rem 7%;
-    width: 100%;
-    top: clamp(4%, 6%, 8%);
-    left: 50%;
-    transform: translateX(-50%);
+    padding: 2rem 7%;
     background-color: transparent;
     z-index: 999;
 }
 
 #main-title strong {
-    font-family: "Pirata One", system-ui;
     font-family: "Prata", serif;
     font-weight: 400;
     font-style: normal;
@@ -229,46 +222,32 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 
 @media (max-width: 768px) {
 
-    #header {
-        left: 0;
-        transform: translateX(0);
-    }
-
     #navigation {
         display: none;
         position: fixed;
         left: 0;
-        top: -4rem;
-        height: 105vh;
+        top: 0;
+        height: 100vh;
         min-width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        -webkit-transform: translateX(100%);
-        -webkit-transition: transform 0.3s ease-in-out;
-        -moz-transform: translateX(100%);
-        -moz-transition: transform 0.3s ease-in-out;
+        backdrop-filter: blur(5px);
     }
 
     #navigation.active {
-        transform: translateX(0);
         display: block;
     }
 
     #navigation ul {
-        position: absolute;
         display: block;
         height: 100%;
-        margin-top: 4.3rem;
+        margin: 3.9rem 0 0 0;
     }
 
     #menu li {
-        display: flex;
         padding: 1rem 0 1rem 2rem;
     }
 
     #menu li a {
-        width: 100%;
         font-size: 1.5em;
     }
  
@@ -308,17 +287,6 @@ main {
     background-color: rgba(0, 0, 0, 0.90);
 }
 
-#home-main {
-    margin-top: 100vh;
-}
-
-#appointment-main {
-    padding-top: 5rem;
-}
-
-#gallery-main {
-    padding-top: 5rem;
-}
 /* F I R S T - S E C T I O N - I N T R O - S T A R T */
 
 #intro {
@@ -356,8 +324,8 @@ main {
 }
 
 #main-article-content blockquote {
-    top: 15%;
-    right: 8%;
+    top: 20%;
+    right: 7%;
 }
 
 #main-article-content blockquote strong {
@@ -388,7 +356,7 @@ main {
 }
 
 #glassy-button {
-    top: 15%;
+    top: 20%;
     left: 7%;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -428,7 +396,7 @@ main {
     color: rgba(255, 255, 255, 1);
     position: absolute;
     z-index: 3;
-    bottom: 5%;
+    bottom: 15%;
     right: 8%;
     font-size: 2em;
     cursor: pointer;
