@@ -13,29 +13,12 @@ html {
     scroll-behavior: smooth;
 }
 
-#custom-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../images/backgroundSkull.jpeg) no-repeat center center;
-    background-size: 40rem;
-    z-index: -1;
-    pointer-events: none;
-}
-
-#page-content {
-    position: relative;
-    z-index: 1;
-}
-
-#hero {
-    height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
+h1, h2, h3, h4, h5, h6, p, th, td, label, button, a, blockquote, strong {
     color: rgb(255, 255, 255);
+}
+
+a {
+    cursor: pointer;
 }
 
 .d-flex {
@@ -80,6 +63,10 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     padding: 0rem 10rem;
 }
 
+.padding-rl-7 {
+    padding: 0rem 7%;
+}
+
 .wh-100 {
     width: 100%;
     height: 100%;
@@ -91,6 +78,10 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 
 .background-color-f {
     background-color: #ffffff !important;
+}
+
+.bg-dark {
+    background-color: rgba(0, 0, 0, 0.90) !important;
 }
 
 .opacity-animation {
@@ -108,13 +99,46 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 
 /* ----------------- B R E A K P O I N T - O N E ----------------- */
 
-/* ----------------- A S I D E - S T A R T ----------------- (TOP ON THE PAGE)*/
+/* ----------------- B A C K G R O U N D - S K U L L - I M A G E ----------------- */
+
+/* background image */
+#custom-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(../images/backgroundSkull.jpeg) no-repeat center;
+    background-size: 40rem;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ----------------- B A C K G R O U N D - S K U L L - I M A G E ----------------- */
+
+/* ----------------- B R E A K P O I N T - T W O ----------------- */
+
+/* ----------------- O U T E R - D I V - W R A P P E R S ----------------- */
+
+/* #hero, main, footer wrapper*/
+#page-content {
+    z-index: 1;
+}
+
+/* aside, header, intro outer wrapper */
+#hero {
+    height: 100vh;
+}
+
+/* appoinment page*/
+
+/* ----------------- O U T E R - D I V - W R A P P E R S ----------------- */
+
+/* ----------------- B R E A K P O I N T - T H R E E ----------------- */
+
+/* ----------------- A S I D E - S T A R T ----------------- (TOP ON THE PAGE - OVERLAY ON THE INTRO)*/
 
 #primary-social {
-    background-color: transparent;
-    z-index: 998;
+    z-index: 3;
     top: 0;
-    justify-content: center;
 }
 
 #icon-menu li a i {
@@ -146,17 +170,16 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     }
 }
 
-/* ----------------- A S I D E - E N D ----------------- (TOP ON THE PAGE)*/
+/* ----------------- A S I D E - E N D ----------------- (TOP ON THE PAGE - OVERLAY ON THE INTRO)*/
 
-/* ----------------- B R E A K P O I N T - T W O ----------------- */
+/* ----------------- B R E A K P O I N T - F O U R ----------------- */
 
-/* ----------------- H E A D E R - S T A R T ----------------- */
+/* ----------------- H E A D E R - S T A R T ----------------- (OVERLAY ON THE INTRO)*/
 
 #header {
     justify-content: space-between;
     padding: 2rem 7%;
-    background-color: transparent;
-    z-index: 999;
+    z-index: 3;
 }
 
 #main-title strong {
@@ -164,25 +187,23 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     font-weight: 400;
     font-style: normal;
     font-size: max(1.5rem, 2.5vmax);
-    color: rgba(255, 255, 255, 1);
 }
 
 #menu li {
     padding: 0rem 1rem;
 }
 
-#menu li a {
-    color: rgba(255, 255, 255, 1);
+#menu li:last-child {
+    padding-right: 0;
 }
 
 /* H A M B U R G E R - M E N U - B U T T O N */
 
-#menu-button {
+#menu-btn {
     display: none;
     position: relative;
     width: 1.875rem;
     height: 1.875rem;
-    right: 2%;
     cursor: pointer;
 }
 
@@ -192,7 +213,8 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     height: 0.1875rem;
     background-color: rgba(255, 255, 255, 1);
     top: 50%;
-    transform: translateY(-50%) scaleY(1.05);
+    /* transform: translateY(-50%) scaleY(1.05); */
+    will-change: transform;
 }
 
 #hamburger-menu::before,
@@ -201,8 +223,6 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     position: absolute;
     background-color: rgba(255, 255, 255, 1);
     transition: transform 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
     will-change: transform;
     width: 100%;
     height: 0.1875rem;
@@ -225,51 +245,47 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
     #navigation {
         display: none;
         position: fixed;
-        left: 0;
         top: 0;
-        height: 100vh;
+        left: 0;
+        min-height: 100vh;
         min-width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(5px);
     }
 
     #navigation.active {
-        display: block;
+        display: flex;
     }
 
     #navigation ul {
         display: block;
         height: 100%;
-        margin: 3.9rem 0 0 0;
+        margin: 3.8rem 0 0 7%;
     }
 
     #menu li {
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 0;
     }
 
     #menu li a {
         font-size: 1.5em;
     }
  
-    #menu-button {
+    #menu-btn {
         display: flex;
     }
 
-    #menu-button.active #hamburger-menu {
+    #menu-btn.active #hamburger-menu {
         background-color: transparent;
     }
     
-    #menu-button.active #hamburger-menu::before {
+    #menu-btn.active #hamburger-menu::before {
         transform: translateY(8px) rotate(45deg);
-        -webkit-transform: translateY(8px) rotate(45deg);
-        -moz-transform: translateY(8px) rotate(45deg);
         background-color: #ffffff;
     }
     
-    #menu-button.active #hamburger-menu::after {
+    #menu-btn.active #hamburger-menu::after {
         transform: translateY(-8px) rotate(-45deg);
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        -moz-transform: translateY(-8px) rotate(-45deg);
         background-color: #ffffff;
     }
     
@@ -277,54 +293,34 @@ h1, h2, h3, h4, h5, h6, p, th, td, label, button, a {
 
 /* H E A D E R -  R E S P O N S I V E */
 
-/* ----------------- H E A D E R - E N D ----------------- */
+/* ----------------- H E A D E R - E N D ----------------- (OVERLAY ON THE INTRO)*/
 
-/* ----------------- B R E A K P O I N T - T H R E E ----------------- */
+/* ----------------- B R E A K P O I N T - F I V E ----------------- */
 
-/* ----------------- M A I N - S T A R T ----------------- */
-
-main {
-    background-color: rgba(0, 0, 0, 0.90);
-}
+/* ----------------- V I D E O - O V E R L A Y - C O N T E N T - S E C T I O N ----------------- */
 
 /* F I R S T - S E C T I O N - I N T R O - S T A R T */
 
 #intro {
-    position: absolute;
-    top: 0;
     width: 100%;
-    text-align: center;
     height: 100vh;
 }
 
-#video-container {
-    left: 0;
-    overflow: hidden;
-    background: #333;
-}
-
-#introVideo {
-    object-fit: cover;
-    z-index: 0;
-}
-
 #video-container:after {	
-    content: '';
+    content: "";
     position: absolute;
-	z-index: 1;
 	height: 100%;
 	width: 100%;
-	top: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.6);
 }
 
-#main-article-content {
-    z-index: 2;
+#introVideo {
+    object-fit: cover;
 }
 
 #main-article-content blockquote {
-    top: 20%;
+    top: 20.5%;
     right: 7%;
 }
 
@@ -352,18 +348,16 @@ main {
     font-weight: 100;
     font-size: clamp(0.6em, 1.8vmax, 3em);
     letter-spacing: 0em;
-    cursor: pointer;
 }
 
 #glassy-button {
-    top: 20%;
+    top: 21%;
     left: 7%;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 0.5em;
     font-size: clamp(1em, 2vmax, 2.5em);
     padding: 0.6em 1.2em;
-    text-align: center;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: background 0.3s, border 0.3s;
@@ -395,10 +389,10 @@ main {
 .sound-icon {
     color: rgba(255, 255, 255, 1);
     position: absolute;
-    z-index: 3;
-    bottom: 15%;
-    right: 8%;
-    font-size: 2em;
+    z-index: 2;
+    bottom: 12%;
+    right: 7%;
+    font-size: max(2em, 2.5vmax);
     cursor: pointer;
 }
 
@@ -406,87 +400,19 @@ main {
     display: none;
 }
 
-/* I N T R O - R E S P O N S I V E */
-
-/* @media (max-width: 768px) {
-
-}
-
-@media (max-height: 1400px) {
-    .intro {
-        height: 120vh;
-    }
-}
-
-@media (max-height: 1190px) {
-    .intro {
-        height: 110vh;
-    }
-} */
-
-@media (max-width: 768px) {
-
-    /* #main-article-content blockquote strong {
-        font-size: 7vw;
-        line-height: 1.2em;
-    }
-
-    #main-article-content blockquote strong:first-child {
-        font-size: 10vw;
-    }
-
-    #main-article-content blockquote strong:last-child {
-        font-size: 4.1vw;
-        letter-spacing: -0.02em;
-        line-height: 1rem;
-    }
-
-    #main-article-content #custom-text {
-        font-size: 8vw;
-        letter-spacing: 0.25em;
-    } */
-}
-
-@media (min-width: 1541px) {
-
-    /* #main-article-content blockquote strong {
-        font-size: 4em;
-    }
-
-    #main-article-content blockquote strong:first-child {
-        font-size: 4em;
-    }
-
-    #main-article-content blockquote strong:last-child {
-        font-size: 1.91em;
-        letter-spacing: -0.05rem;
-    }
-
-    #main-article-content #custom-text {
-        font-size: 4.5em;
-        letter-spacing: 0.65rem !important;
-    } */
-
-    .sound-icon {
-        font-size: 4em;
-    }
-    
-} 
-
-/* I N T R O - R E S P O N S I V E */
-
 /* F I R S T - S E C T I O N - I N T R O - E N D */
 
-/* ----------------- B R E A K P O I N T - F O U R ----------------- */
+/* ----------------- B R E A K P O I N T - S I X ----------------- */
+
+/* ----------------- M A I N - S T A R T ----------------- */
+
+main {
+    background-color: rgba(0, 0, 0, 0.90);
+}
 
 /* S E C O N D - S E C T I O N - T I T L E - S T A R T */
 
-#myWorksCustom{
-    padding-top: 4rem;
-}
-
 .title-section {
-    text-align: center;
     padding: 1rem 0;
 }
 
@@ -503,130 +429,32 @@ main {
 }
 
 .first-ts {
-    font-size: 53px;
+    font-size: clamp(2.2rem, 3.5vw, 3.3rem);
 }
 
-.second-ts {
-    font-size: 53px;
+.second-ts,
+.gallery-ts,
+.info-ts {
+    font-size: clamp(2.2rem, 3.5vw, 3.3rem);
 }
 
 .third-ts {
-    font-size: 43px;
+    font-size: clamp(1.6rem, 3vw, 2.7rem);
 }
 
 .fourth-ts {
-    font-size: 36px;
+    font-size: clamp(1.4rem, 2.8vw, 2.3rem);
 }
-
-.gallery-ts {
-    font-size: 53px;
-}
-
-.info-ts {
-    font-size: 53px;
-}
-
-/* T I T L E - R E S P O N S I V E */
-
-@media (max-width: 990px) {
-    .title-wrapper {
-        padding: 0 4.7rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .title-wrapper {
-        padding: 0 4.7rem;
-    }
-
-    /* .title-section {
-        padding: 20px 10px;
-    } gives extra padding to each section title element unnecessarily */
-
-    .line {
-        margin: 0 0;
-    }
-
-    .title {
-        padding: 2rem 0.5rem;
-    }
-
-    .first-ts {
-        font-size: 46px;
-    }
-    
-    .second-ts {
-        font-size: 46px;
-    }
-    
-    .third-ts {
-        font-size: 36px;
-    }
-    
-    .fourth-ts {
-        font-size: 36px;
-    }
-
-    .gallery-ts {
-        font-size: 46px;
-    }
-
-    .info-ts {
-        font-size: 46px;
-    }
-
-    @media (max-width: 476px) {
-        .first-ts {
-            font-size: 1.8em;
-        }
-
-        .second-ts {
-            font-size: 2em;
-        }
-
-        .third-ts {
-            font-size: 1.8em;
-        }
-
-        .fourth-ts {
-            font-size: 1.8em;
-        }
-        .title-wrapper {
-            padding: 0 2rem;
-        }
-    }
-
-    @media (max-width: 400px) {
-        .title-wrapper {
-            padding: 0 2rem;
-        }
-        
-        .first-ts {
-            font-size: 1.6em;
-        }
-
-        .third-ts {
-            font-size: 26px;
-        }
-        
-        .fourth-ts {
-            font-size: 26px;
-        }
-    }
-}
-
-/*T I T L E - R E S P O N S I V E */
 
 /* S E C O N D - S E C T I O N - T I T L E - E N D */
 
-/* ----------------- B R E A K P O I N T - F I V E ----------------- */
+/* ----------------- B R E A K P O I N T - S E V E N ----------------- */
 
 /* T H I R D - S E C T I O N - P H O T O - G A L L E R Y - S T A R T */
 
 #photo-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 27vw, 230px), 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 #photo-card {
@@ -645,11 +473,12 @@ main {
 .card-content h2 {
     font-size: 1.5rem;
     margin: 0 0 0.5rem;
+    color: #000000
 }
 
 .card-content p {
     margin: 0;
-    color: #000;
+    color: #000000;
 }
 
 #pagination {
@@ -669,20 +498,6 @@ main {
 
 /* P H O T O - G A L L E R Y - R E S P O N S I V E */
 
-@media (max-width: 990px) {
-    #photo-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        padding: 0 4.7rem;
-    }
-}
-
-@media (max-width: 876px) {
-    #photo-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        padding: 0 4.7rem;
-    }
-}
-
 @media (max-width: 768px) {
     .card-content {
         padding: 0;
@@ -696,34 +511,19 @@ main {
 @media (max-width: 682px) {
     #photo-gallery {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        padding: 0 4.5rem;
+        /* padding: 0 4.5rem */
     }
 }
 
 @media (max-width: 576px) {
     #photo-gallery {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        padding: 0 4.5rem;
-    }
-}
-
-@media (max-width: 476px) {
-    #photo-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        padding: 0 2rem;
     }
 }
 
 @media (max-width: 412px) {
     #photo-gallery {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        padding: 0 2rem;
-    }
-}
-
-@media (max-width: 320px){
-    #photo-gallery {
-        padding: 0 1rem;
     }
 }
 
@@ -731,7 +531,7 @@ main {
 
 /* T H I R D - S E C T I O N - P H O T O - G A L L E R Y - E N D */
 
-/* ----------------- B R E A K P O I N T - S I X ----------------- */
+/* ----------------- B R E A K P O I N T - E I G H T ----------------- */
 
 /* F O U R T H - S E C T I O N - A B O U T - M E - S T A R T */
 
@@ -811,7 +611,7 @@ main {
 
 /* F O U R T H - S E C T I O N - A B O U T - M E - E N D */
 
-/* ----------------- B R E A K P O I N T - S E V E N ----------------- */
+/* ----------------- B R E A K P O I N T - N I N E ----------------- */
 
 /* F I F T H - S E C T I O N - P O P U L A R - P H O T O - G A L L E R Y - S T A R T */
 
@@ -883,7 +683,7 @@ main {
 
 /* F I F T H - S E C T I O N - P O P U L A R - P H O T O - G A L L E R Y - S T A R T */
 
-/* ----------------- B R E A K P O I N T - E I G H T ----------------- */
+/* ----------------- B R E A K P O I N T - T E N ----------------- */
 
 /* S I X T H - S E C T I O N - C A R O U S E L - C O N T A I N E R - S T A R T */
 
@@ -943,41 +743,53 @@ main {
 
 /* C A R O U S E L - R E S P O N S I V E */
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     #carousel-container {
         padding: 0;
+        background-color: rgba(0, 0, 0, 1);
+        height: 250px;
     }
+
+    .carousel {
+        height: 100%;
+    }
+
+    .carousel-item {
+        padding: 2rem;
+    }
+
     .carousel-item img {
-        max-width: 80%;
+        max-width: 110%;
+        max-height: 100%;
         
     }
+    .carousel-control.left,
+    .carousel-control.right
+    {
+        height: 100%;
+        width: 120px;
+        background-color: rgba(0, 0, 0, 0.90);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
     .carousel-control.left {
-        left: 5rem;
+        left: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
     }
     
+    /* RIGHT ARROW: fade from transparent (left) to opaque (right) */
     .carousel-control.right {
-        right: 5rem;
+        right: 0;
+        background: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
     }
-}
 
-@media (max-width: 480px) {
-    .carousel-item img {
-        max-width: 70%;
-    }
-    .carousel-control.left {
-        left: 1rem;
-    }
-    
-    .carousel-control.right {
-        right: 1rem;
-    }
 }
 
 /* C A R O U S E L - R E S P O N S I V E */
 
 /* S I X T H - S E C T I O N - C A R O U S E L - C O N T A I N E R - E N D */
 
-/* ----------------- B R E A K P O I N T - N I N E ----------------- */
+/* ----------------- B R E A K P O I N T - E L E V E N ----------------- */
 
 /* S E V E N T H - S E C T I O N - T E X T - C O N T E N T - S T A R T */
 
@@ -1009,7 +821,7 @@ main {
 
 /* ----------------- M A I N - E N D ----------------- */
 
-/* ----------------- B R E A K P O I N T - T E N ----------------- */
+/* ----------------- B R E A K P O I N T - T W E L V E ----------------- */
 
 /* ----------------- F O O T E R - S T A R T ----------------- */
 
@@ -1068,12 +880,12 @@ footer {
     filter: drop-shadow(1px 1px 0 #F50057) contrast(150%) brightness(110%);
 }
 
-#letter-effect {
+/* #letter-effect {
     display: inline-block;
     filter: drop-shadow(-0.5px -0.5px 0 #24f6f0) contrast(150%) brightness(110%);
-}
+} */
 
-#letter-effect::before {
+/* #letter-effect::before {
     content: 'o'; 
     position: absolute;
     top: 0;
@@ -1081,11 +893,12 @@ footer {
     color: #F50057; 
     z-index: -1;
     filter: drop-shadow(0.5px 0.5px 0 #F50057) contrast(150%) brightness(110%);
-}
+} */
 
-#letter-effect::before {
-    transform: translate(0.5px, 0.5px); /* Adjust the movement */
-}
+/* #letter-effect::before {
+    transform: translate(0.5px, 0.5px); 
+} 
+*/
 
 .mail-journal {
     margin: auto;
@@ -1130,3 +943,143 @@ footer {
 }
 
 /* ----------------- F O O T E R - E N D ----------------- */
+
+/* ----------------- B R E A K P O I N T - T H I R T E E N ----------------- */
+
+/* ----------------- A P P O I N T M E N T - P A G E - S T A R T ----------------- */
+
+.appointment {
+    padding: 0 0 2rem 0;
+}
+
+.appointment form {
+    width: 500px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.preserved-container {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+}
+
+.padding-5 {
+    padding: 5px 0 5px 5px;
+}
+
+.form-input {
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+}
+
+input.flatpickr {
+    cursor: pointer;
+}
+
+.personal-info-first {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.appointment form h2 {
+    flex-basis: 100%; /* Ensure h3 takes full width */
+    order: -1; /* Position h3 above inputs */
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5em;
+    margin: 0 0 1rem 0;
+}
+
+.e-number-date {
+    padding: 10px 0 10px 0;
+}
+
+.appointment form .preserved-container .e-number-date select {
+    appearance: none;
+    -webkit-appearance: none; /* For WebKit browsers */
+    -moz-appearance: none; /* For Firefox */
+}
+
+.appointment form .preserved-container .e-number-date select option {
+    background-color: transparent;
+}
+
+.personal-info-first input {
+    flex: 1;
+    width: calc(50% - 5px);
+}
+
+.appointment form input::placeholder {
+    color: rgba(0, 0, 0, 0.83);
+    font-size: 12px;
+}
+
+.appointment form input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.appointment form .name-surname input:first-of-type {
+    margin-right: 10px;
+}
+
+/*Chrome and Safari*/
+.appointment form input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/*Firefox*/
+.appointment form div article input[type=number] {
+    appearance:textfield;
+}
+
+.appointment form div article textarea {
+    resize: none;
+    padding: 5px 0 0 5px;
+}
+
+.appointment form article select {
+    padding: 5px 0;
+}
+
+#uploadfile {
+    color: #fff;
+}
+
+#light-w {
+    background-color: #F8E6D1;
+}
+
+.appointment-date label {
+    padding: 15px 0 15px 5px;
+}
+
+/* A P P O I N T M E N T - R E S P O N S I V E */
+
+@media (max-width: 768px) {
+    .appointment {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .name-surname {
+        flex-direction: column;
+    }
+
+    .name-surname input {
+        width: 100%;
+    }
+}
+
+/* ----------------- A P P O I N T M E N T - P A G E - E N D ----------------- */

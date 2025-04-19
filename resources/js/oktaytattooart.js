@@ -3,11 +3,10 @@
 
 //BUTTON and NAVBAR
 const navigation = document.getElementById('navigation');
-const menuButton = document.getElementById('menu-button');
+const menuButton = document.getElementById('menu-btn');
 const body = document.body;
 
 //FUNCTIONS
-if (navigation && menuButton) {
     const openNavigation = () => {
         navigation.classList.toggle('active');
         menuButton.classList.toggle('active');
@@ -29,7 +28,7 @@ if (navigation && menuButton) {
     menuButton.addEventListener('click', openNavigation);
 
     document.addEventListener('click', closeNavigation);
-}
+
 
 const turnOffButton = document.getElementById('turnSoundOff');
 const turnOnButton = document.getElementById('turnSoundOn');
@@ -136,4 +135,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initially show the first page
     showPage(1);
+});
+
+document.querySelectorAll('.flatpickr-input').forEach(input => {
+    input.style.cursor = 'pointer';
 });

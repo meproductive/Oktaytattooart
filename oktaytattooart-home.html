@@ -4,28 +4,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore unique tattoo designs by Oktay. Find inspiration in our professional tattoo gallery.">
+        <meta property="og:title" content="Oktay Tattoo Art – Professional Tattoo Gallery">
+        <meta property="og:description" content="Explore Oktay's portfolio of fine-line, blackwork, and custom tattoos.">
+        <meta property="og:image" content="https://yourwebsite.com/gallery-preview.jpg">
+        <meta property="og:url" content="https://yourwebsite.com">
+        <meta property="og:type" content="website">
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="resources/css/oktaytattooart.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
         
+        <!--FONTS-->
+
+        <!-- ROBOTO -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- PRATA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+        
         <!-- JAVASCRIPT -->
-        <script src="resources/js/oktaytattooart.js" defer async></script>
+        <script src="resources/js/oktaytattooart.js" defer></script>
 
         <title>Tattoo Gallery | OktayTattooArt</title>
     </head>
 
     <body>
 
-        <div id="custom-background"></div>
+        <!--BACKGROUND SKULL IMAGE-->
+        <div class="wh-100" id="custom-background"></div>
 
-        <div id="page-content">
+        <!--PAGE WRAPPER-->
+        <div class="p-relative" id="page-content">
+
+            <!--HERO WRAPPER-->
 
             <div class="d-flex-column" id="hero">
 
-                <!--SOCIAL ICON MENU SECTION-->
+                <!--SOCIAL ICON MENU-->
 
-                <aside id="primary-social">
+                <aside class="j-content-center" id="primary-social">
                     <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
                         <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
                         <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
@@ -33,9 +54,9 @@
                     </ul>
                 </aside>
             
-                <!--SOCIAL ICON MENU SECTION-->
+                <!--SOCIAL ICON MENU-->
             
-                <!--HEADER NAVIGATION SECTION-->
+                <!--HEADER NAVIGATION-->
             
                 <header class="d-flex a-items-center" id="header">
                     <h1 id="main-title"><strong>oktaytattooart</strong></h1>
@@ -47,27 +68,27 @@
                             <li><a href="#">CONTACT</a></li>
                         </ul>
                     </nav>
-                    <i class="d-flex a-items-center" id="menu-button"><span id="hamburger-menu"></span></i>
+                    <i class="a-items-center" id="menu-btn"><span id="hamburger-menu"></span></i>
                 </header>
 
-                <!--HEADER NAVIGATION SECTION-->
+                <!--HEADER NAVIGATION-->
 
                 
                 <!--VIDEO OVERLAY CONTENT-->
                 
-                <section class="intro d-flex p-relative top-0 color-f" id="intro">
-                    <figure class="d-flex p-absolute top-0 wh-100" id="video-container">
-                        <video class="p-relative wh-100" id='introVideo' src="resources/videos/introWithSound.mp4" autoplay loop playsinline muted></video>
+                <section class="p-absolute" id="intro">
+                    <figure class="p-absolute wh-100" id="video-container">
+                        <video class="wh-100" id='introVideo' src="resources/videos/introWithSound.mp4" autoplay loop playsinline muted preload="auto"></video>
                     </figure>
-                    <article class="d-flex-column content-items-center p-relative wh-100" id="main-article-content">
-                        <a href="appointment.html" class="p-absolute" id="glassy-button">Appointment</a>
-                        <blockquote class="d-flex-column p-absolute">
-                            <strong class="opacity-animation">Ink</strong>
-                            <strong class="opacity-animation">is</strong>
-                            <strong class="opacity-animation">what makes</strong>
-                            <strong class="opacity-animation">you</strong>
-                            <strong class="opacity-animation">different!</strong>
-                            <strong class="opacity-animation"><a href="#howtocare">Learn how to take care of it better!</a></strong>
+                    <article class="d-flex p-relative wh-100" id="main-article-content">
+                        <a href="oktaytattooart-appointment.html" class="p-absolute" id="glassy-button">Appointment</a>
+                        <blockquote class="d-flex-column p-absolute opacity-animation">
+                            <strong>Ink</strong>
+                            <strong>is</strong>
+                            <strong>what makes</strong>
+                            <strong>you</strong>
+                            <strong>different!</strong>
+                            <strong><a href="#howtocare">Learn how to take care of it better!</a></strong>
                         </blockquote>
                     </article>
                     <i class="fa-solid fa-volume-xmark sound-icon" id="turnSoundOff"></i>
@@ -77,17 +98,17 @@
                 <!--VIDEO OVERLAY CONTENT-->
 
             </div>
-            
+            <!--HERO WRAPPER-->
        
 
-        <!--MAIN CONTENT SECTION-->
+        <!--MAIN CONTENT-->
 
         <main id="home-main" role="main">
 
              <!--TITLE CONTENT-->
 
-             <section class="title-section" id="myWorksCustom">
-                <article class="title-wrapper padding-10 d-flex content-items-center">
+            <section class="title-section">
+                <article class="title-wrapper padding-rl-7 d-flex a-items-center">
                     <hr class="line">
                     <h2 class="title first-ts">MY WORKS</h2>
                     <hr class="line">
@@ -98,10 +119,10 @@
 
             <!--PHOTO GALLERY CONTENT-->
 
-            <section class="d-grid padding-10 j-content-center p-relative" id="photo-gallery">
+            <section class="d-grid padding-rl-7 j-content-center p-relative" id="photo-gallery">
                 <figure class="d-flex-column j-content-center background-color-f" id="photo card">
                         <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">                  
-                    <article class="card-content">
+                    <article class="card-content d-flex-column a-items-center">
                         <h2 class="tattoo-name">Photo Title 1</h2>
                         <p class="tattoo-name">Description of photo 1.</p>
                     </article>
@@ -173,7 +194,7 @@
             <!--SECOND TITLE CONTENT-->
 
             <section class="title-section">
-                <article class="title-wrapper padding-10 d-flex content-items-center">
+                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
                     <hr class="line">
                     <h2 class="title second-ts">ARTIST</h2>
                     <hr class="line">
@@ -202,7 +223,7 @@
             <!--THIRD TITLE CONTENT-->
 
             <section class="title-section">
-                <article class="title-wrapper padding-10 d-flex content-items-center">
+                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
                     <hr class="line">
                     <h2 class="title third-ts">POPULAR TATTOOS</h2>
                     <hr class="line">
@@ -250,7 +271,7 @@
             <!--FOURTH TITLE CONTENT-->
 
             <section class="title-section">
-                <article class="title-wrapper padding-10 d-flex content-items-center">
+                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
                     <hr class="line">
                     <h2 class="title fourth-ts">MY AWARDS</h2>
                     <hr class="line">
@@ -291,7 +312,7 @@
             <!--FIFTH TITLE CONTENT-->
 
             <section class="title-section">
-                <article class="title-wrapper padding-10 d-flex content-items-center">
+                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
                     <hr class="line">
                     <h2 class="title fifth-ts">HOW TO TAKE CARE</h2>
                     <hr class="line">
@@ -302,7 +323,7 @@
 
             <!-- TEXT CONTENT -->
 
-            <section class="text-content padding-10" id="howtocare">
+            <section class="text-content padding-rl-7" id="howtocare">
                 <article class="d-flex-column" id="text-container">
                     <h2>LOREM IPSUM</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie iaculis arcu imperdiet pretium. Proin posuere ultricies diam, in congue nisl semper vel. Sed neque felis, dignissim congue justo quis, scelerisque pellentesque justo. In a ipsum et nisl lobortis efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin convallis est a maximus vehicula. Aenean in gravida ligula. In ac justo eu dui euismod euismod.
@@ -323,9 +344,9 @@
 
             </main>
 
-            <!--MAIN CONTENT SECTION-->
+            <!--MAIN CONTENT-->
 
-            <!--FOOTER CONTENT SECTION-->
+            <!--FOOTER CONTENT-->
 
             <footer>
               <section class="d-flex-column a-items-center" id="footer-container">
@@ -344,12 +365,10 @@
               </section>
             </footer>
 
-            <!--FOOTER CONTENT SECTION-->
-
-        <!--MAIN CONTENT SECTION-->
+            <!--FOOTER CONTENT-->
 
         </div>
-        
+        <!--PAGE WRAPPER-->
         
     </body>
 

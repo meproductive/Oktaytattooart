@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Flatpickr CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+        <!--CSS-->
+        <link href="resources/css/oktaytattooart.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--FONTS-->
+
+        <!-- ROBOTO -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- PRATA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+        <title>TATTOO</title>
+    </head>
+
+    <body>
+       
+       <!--BACKGROUND SKULL IMAGE-->
+       <div class="wh-100" id="custom-background"></div>
+
+       <!--PAGE WRAPPER-->
+       <div class="p-relative" id="page-content">
+
+           <!--HERO WRAPPER-->
+
+           <div class="d-flex-column">
+
+               <!--SOCIAL ICON MENU-->
+
+               <aside class="j-content-center" id="primary-social" style="background-color: rgba(0, 0, 0, 0.9);">
+                   <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
+                       <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
+                       <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
+                       <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
+                   </ul>
+               </aside>
+           
+               <!--SOCIAL ICON MENU-->
+           
+               <!--HEADER NAVIGATION-->
+           
+               <header class="d-flex a-items-center" id="header" style="background-color: rgba(0, 0, 0, 0.9);">
+                   <h1 id="main-title"><strong>oktaytattooart</strong></h1>
+                   <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
+                       <ul class="d-flex" id="menu">
+                           <li><a href="oktaytattooart-home.html">HOME</a></li>
+                           <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
+                           <li><a href="tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
+                           <li><a href="#">CONTACT</a></li>
+                       </ul>
+                   </nav>
+                   <i class="a-items-center" id="menu-btn"><span id="hamburger-menu"></span></i>
+               </header>
+
+               <!--HEADER NAVIGATION-->
+           </div>
+
+        <!--MAIN CONTENT SECTION-->
+
+        <main id="appointment-main">
+
+            <section class="title-section">
+                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
+                    <hr class="line background-color-f">
+                    <h2 class="title second-ts color-f">APPOINTMENT</h2>
+                    <hr class="line background-color-f">
+                </article>
+            </section>
+
+            <section class="appointment d-flex-column content-items-center">
+
+                <form class="d-flex-column content-items-center" action="#">
+
+                        <div class="preserved-container" id="personal-info-container">
+
+                            <article class="name-surname personal-info-first d-flex">
+                                <h2>PERSONAL INFORMATION</h2>
+                                <label class="form-label padding-5">NAME</label>
+                                <input class="form-input padding-5" type="text" required>
+                                <label class="form-label padding-5">SURNAME</label>
+                                <input class="form-input padding-5" type="text" required>
+                            </article>
+
+                            <article class="e-number-date d-flex-column gap-10">
+                                <label class="form-label padding-5">E-MAIL</label>
+                                <input class="form-input padding-5" type="email" required>
+                                <label class="form-label padding-5">PHONE NUMBER</label>
+                                <input class="form-input padding-5" type="number" inputmode="numeric" required>
+                                <label class="form-label padding-5" for="date">BIRTHDAY</label>
+                                <input class="form-input padding-5 flatpickr" id="birthsdate" name="date" type="datetime-local" required>                        
+                            </article>
+
+                        </div>
+
+                        <div class="preserved-container">
+
+                            <article class="gap-10 d-flex-column">
+                                <h2>CHOICES</h2>
+                                <label class="form-label padding-5">FAVORITE TATTOOS</label>
+                                <select class="padding-5" multiple>
+                                    <option>MINIMAL</option>
+                                    <option>COLORED</option>
+                                    <option>TRIBAL</option>
+                                    <option>COVERUP</option>
+                                    <option></option>
+                                </select>
+                                <label class="form-label padding-5">DESCRIBE IT</label>
+                                <textarea placeholder="Let us know what you like most before consultation with designer" rows="5"  cols="50" ></textarea>
+                                <label class="form-label padding-5">VISUALIZE IT</label>
+                                <input class="form-input padding-5" type="file" id="uploadfile">      
+
+                            </article>
+                        </div>
+
+                        <div class="preserved-container" id="appointment-container">
+
+                            <article class="appointment-date d-flex-column">
+                                <h2>APPOINTMENT DATE</h2>
+                                <label class="form-label padding-5" for="appointment">Appointment date</label>
+                                <input class="form-input padding-5 flatpickr" id="appsdate" name="appointment" type="datetime-local" required>
+                            </article>
+
+                        </div>
+
+                    <input class="form-input padding-5" type="submit" value="submit">
+                </form>
+
+            </section>
+
+        </main>
+
+        <!--MAIN CONTENT SECTION-->
+
+        
+        <!--FOOTER CONTENT SECTION-->
+        <footer>
+        </footer>
+        <!--FOOTER CONTENT SECTION-->
+        </div>
+
+        <script src="resources/js/oktaytattooart.js"></script>
+
+        <!--Flatpickr JS-->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <script>
+            config = {
+                altInput: true,
+                dateFormat: "MM-DD-YYYY",
+            }
+            flatpickr("#birthsdate", config);
+
+            config = {
+                enableTime: true,
+                altInput: true,
+                dateFormat: "MM-DD-YYYY H:i",
+                minDate: "today",
+                minTime: "10:00",
+                maxTime: "19:00"
+            }
+            flatpickr("#appsdate", config);
+        </script>
+
+    </body>
+
+</html>
