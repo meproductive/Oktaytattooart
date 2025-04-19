@@ -306,6 +306,10 @@ a {
     height: 100vh;
 }
 
+#video-container {
+    z-index: 0;
+}
+
 #video-container:after {	
     content: "";
     position: absolute;
@@ -317,6 +321,9 @@ a {
 
 #introVideo {
     object-fit: cover;
+    top: 0;
+    left: 0;
+    transform: translateZ(0);
 }
 
 #main-article-content blockquote {
