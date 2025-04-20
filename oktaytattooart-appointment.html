@@ -24,7 +24,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
 
-        <title>TATTOO</title>
+        <script src="resources/js/oktaytattooart-root.js" defer></script>
+        <script>
+            document.querySelectorAll('.flatpickr-input').forEach(input => {
+            input.style.cursor = 'pointer';
+        });
+        </script>
+
+        <title>Appointment | OktayTattooArt</title>
     </head>
 
     <body>
@@ -152,12 +159,10 @@
         <!--FOOTER CONTENT SECTION-->
         </div>
 
-        <script src="resources/js/oktaytattooart.js"></script>
-
         <!--Flatpickr JS-->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
         <script>
+
             config = {
                 altInput: true,
                 dateFormat: "MM-DD-YYYY",
@@ -173,6 +178,7 @@
                 maxTime: "19:00"
             }
             flatpickr("#appsdate", config);
+
         </script>
 
     </body>
