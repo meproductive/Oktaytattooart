@@ -102,7 +102,8 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    background: url(../images/backgroundSkull.jpeg) no-repeat center;
+    background: url(../images/backgroundSkull.jpeg) no-repeat;
+    background-position: center;
     background-size: 40rem;
     z-index: -1;
     pointer-events: none;
@@ -303,22 +304,29 @@ a {
 }
 
 #video-container {
+    left: 0;
+    overflow: hidden;
     z-index: 0;
 }
 
 #video-container:after {	
     content: "";
     position: absolute;
+    z-index: 1;
 	height: 100%;
 	width: 100%;
+    top: 0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.6);
 }
 
 #introVideo {
     object-fit: cover;
-    left: 0;
-    transform: translateZ(0);
+    display: block;
+}
+
+#main-article-content {
+    z-index: 2;
 }
 
 #main-article-content blockquote {
@@ -618,7 +626,7 @@ main {
     scroll-snap-type: x mandatory;
     margin: 0rem 7%;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
 }
 
 .gallery-item {
