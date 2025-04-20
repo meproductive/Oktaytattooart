@@ -624,9 +624,9 @@ main {
 #gallery-container {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    margin: 0rem 7%;
+    /* margin: 0rem 7%; */
     scroll-behavior: smooth;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
 }
 
 .gallery-item {
