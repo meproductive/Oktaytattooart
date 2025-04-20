@@ -17,40 +17,50 @@ const intro = document.getElementById('introVideo');
     });
 
 
-const carousel = document.querySelector('.carousel');
-const items = document.querySelectorAll('.carousel-item');
-const prevButton = document.getElementById('left');
-const nextButton = document.getElementById('right');
-
-let currentIndex = 0;
-
-function updateCarousel() {
-    // Remove the active class from all items
-    items.forEach(item => item.classList.remove('active'));
-
-    // Calculate the offset to center the current middle item
-    const offset =- currentIndex * (carousel.clientWidth / 3);
-    carousel.style.transform = `translateX(${offset}px)`;
-
-    // Apply the scaling and 3D effect to the current middle item
-    if (items[currentIndex + 1]) {
-        items[currentIndex + 1].classList.add('active');
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('left');
+    const nextButton = document.getElementById('right');
+    
+    let currentIndex = 0;
+    
+    function getItemsPerView() {
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
     }
-}
-
-prevButton.addEventListener('click', () => {
-    if (currentIndex > -1) { // Allow reaching the first item
-        currentIndex--;
-        updateCarousel();
+    
+    function updateCarousel() {
+        const itemWidth = items[0].offsetWidth;
+        const containerWidth = carousel.offsetWidth;
+    
+        // Center the current item by offsetting it
+        const offset = Math.round(-((itemWidth * currentIndex) - (containerWidth / 2) + (itemWidth / 2)));
+        carousel.style.transform = `translateX(${offset}px)`;
+    
+        items.forEach(item => item.classList.remove('active'));
+    
+        if (items[currentIndex]) {
+            items[currentIndex].classList.add('active');
+        }
     }
-});
 
-nextButton.addEventListener('click', () => {
-    if (currentIndex < items.length - 2) { // Allow reaching the last item
-        currentIndex++;
-        updateCarousel();
-    }
-});
-
-// Initialize the carousel on page load
-updateCarousel();
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+    
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < items.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+    
+    // Recalculate on resize
+    window.addEventListener('resize', updateCarousel);
+    
+    // Initialize
+    updateCarousel();
