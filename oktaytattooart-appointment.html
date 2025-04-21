@@ -9,6 +9,9 @@
         <!--Flatpickr CSS-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+        <!--Select2 CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
         <!--CSS-->
         <link href="resources/css/oktaytattooart.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +29,7 @@
 
         <script src="resources/js/oktaytattooart-root.js" defer></script>
         <script>
-            document.querySelectorAll('.flatpickr-input').forEach(input => {
+            document.querySelectorAll('.flatpickr').forEach(input => {
             input.style.cursor = 'pointer';
         });
         </script>
@@ -108,7 +111,11 @@
                                 <label class="form-label padding-5">PHONE NUMBER</label>
                                 <input class="form-input padding-5" type="number" inputmode="numeric" required>
                                 <label class="form-label padding-5" for="date">BIRTHDAY</label>
-                                <input class="form-input padding-5 flatpickr" id="birthsdate" name="date" type="datetime-local" required>                        
+                                <div class="d-flex p-relative" id="calendar-wrapper">
+                                    <input class="form-input padding-5 flatpickr" id="birthsdate" name="date" type="datetime-local" required readonly placeholder="Pick your birthday">                        
+                                    <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
+                                </div>
+                                <div id="birth-warning" style="color: red; margin-top: 5px;"></div>
                             </article>
 
                         </div>
@@ -117,19 +124,26 @@
 
                             <article class="gap-10 d-flex-column">
                                 <h2>CHOICES</h2>
-                                <label class="form-label padding-5">FAVORITE TATTOOS</label>
-                                <select class="padding-5" multiple>
-                                    <option>MINIMAL</option>
-                                    <option>COLORED</option>
-                                    <option>TRIBAL</option>
-                                    <option>COVERUP</option>
-                                    <option></option>
+                                <label class="form-label" for="favoriteTattoos">FAVORITE TATTOO STYLES(optional)</label>
+                                <select id="favoriteTattoos" class="select2" multiple="multiple" name="SelectedCategoryIds">
+                                    <option value="1">MINIMAL</option>
+                                    <option value="2">COLORED</option>
+                                    <option value="3">TRIBAL</option>
+                                    <option value="4">COVERUP</option>
                                 </select>
-                                <label class="form-label padding-5">DESCRIBE IT</label>
-                                <textarea placeholder="Let us know what you like most before consultation with designer" rows="5"  cols="50" ></textarea>
-                                <label class="form-label padding-5">VISUALIZE IT</label>
+                                <label class="form-label padding-5">DESCRIBE IT(optional)</label>
+                                <textarea placeholder="Describe your tattoo idea – maybe it's a roaring tiger with floral patterns or a galaxy hidden in an eye. Let your imagination flow." rows="5" cols="50"></textarea>
+                                <label class="form-label padding-5">VISUALIZE IT(optional)</label>
                                 <input class="form-input padding-5" type="file" id="uploadfile">      
-
+                                <label class="form-label" for="tattooPlacement" >Tattoo Placement</label>
+                                <select id="tattooPlacement" name="SelectedBodyPartId" class="select2" data-placeholder="Select a body part">
+                                    <option></option>
+                                    <option value="1">Arm</option>
+                                    <option value="2">Back</option>
+                                    <option value="3">Chest</option>
+                                    <option value="4">Leg</option>
+                                    <!-- more options -->
+                                </select>
                             </article>
                         </div>
 
@@ -138,12 +152,15 @@
                             <article class="appointment-date d-flex-column">
                                 <h2>APPOINTMENT DATE</h2>
                                 <label class="form-label padding-5" for="appointment">Appointment date</label>
-                                <input class="form-input padding-5 flatpickr" id="appsdate" name="appointment" type="datetime-local" required>
+                                <div class="d-flex p-relative" id="calendar-wrapper">
+                                    <input class="form-input padding-5 flatpickr" id="appsdate" name="appointment" type="datetime-local" required placeholder="Select appointment date">
+                                    <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
+                                </div>
                             </article>
 
                         </div>
 
-                    <input class="form-input padding-5" type="submit" value="submit">
+                    <input class="form-input padding-5" id="appointment-btn" type="submit" value="submit">
                 </form>
 
             </section>
@@ -161,25 +178,56 @@
 
         <!--Flatpickr JS-->
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        
         <script>
 
-            config = {
-                altInput: true,
-                dateFormat: "MM-DD-YYYY",
-            }
-            flatpickr("#birthsdate", config);
+        flatpickr("#birthsdate", {
+            altInput: true,
+            enableTime: false,
+            dateFormat: "MM-DD-YYYY",
+            disableMobile: true,
+            onChange: function(selectedDates, dateStr, instance) {
+                const birthDate = selectedDates[0];
+                const today = new Date();
+                const age = today.getFullYear() - birthDate.getFullYear();
+                const m = today.getMonth() - birthDate.getMonth();
+                const d = today.getDate() - birthDate.getDate();
 
-            config = {
-                enableTime: true,
-                altInput: true,
-                dateFormat: "MM-DD-YYYY H:i",
-                minDate: "today",
-                minTime: "10:00",
-                maxTime: "19:00"
-            }
-            flatpickr("#appsdate", config);
+                const isUnder18 = m < 0 || (m === 0 && d < 0) ? age - 1 < 18 : age < 18;
+
+                const warningEl = document.getElementById('birth-warning');
+
+                if (isUnder18) {
+                  warningEl.textContent = "You must be at least 18 years old. If you are 16 or 17 please contact via WhatsApp with your parent.";
+                  instance.clear(); // Clear the input
+                } else {
+                  warningEl.textContent = "";
+                }
+            }         
+        });
+
+        flatpickr("#appsdate", {
+            enableTime: true,
+            altInput: true,
+            dateFormat: "MM-DD-YYYY H:i",
+            minDate: "today",
+            minTime: "10:00",
+            maxTime: "19:00",
+            disableMobile: true
+        });
 
         </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script>
+            $(document).ready(function() {
+              $('.select2').select2({
+                  placeholder: "Select your favorite tattoo styles",
+                  width: '100%'  // Make sure it looks good on responsive layouts
+              });
+            });
+          </script>
 
     </body>
 
