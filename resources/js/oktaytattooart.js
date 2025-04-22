@@ -1,4 +1,3 @@
-
 const turnOffButton = document.getElementById('turnSoundOff');
 const turnOnButton = document.getElementById('turnSoundOn');
 const intro = document.getElementById('introVideo');

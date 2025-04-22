@@ -882,28 +882,22 @@ footer {
     padding-left: 1rem;
 }
 
-#social-medias li a {
-    padding: 0;
-}
-
 .fa-whatsapp{
     color: #4CAF50;
 }
 
 .ins-footer{
-    /* Apply gradient */
     background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Mask for Safari and others (optional for SVG compatibility) */
     -webkit-mask: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     mask: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
 #tiktok{
-    display: inline-block;
     filter: drop-shadow(-0.5px -0.5px 0 #24f6f0) contrast(150%) brightness(110%);
+    -webkit-filter: drop-shadow(-0.5px -0.5px 0 #24f6f0) contrast(150%) brightness(110%);
 }
 
 #tiktok::before {
@@ -913,6 +907,7 @@ footer {
 #letter-effect {
     display: inline-block;
     filter: drop-shadow(-0.5px -0.5px 0 #24f6f0) contrast(150%) brightness(110%);
+    -webkit-filter: drop-shadow(-0.5px -0.5px 0 #24f6f0) contrast(150%) brightness(110%);
 } 
 
 #letter-effect::before {
@@ -931,7 +926,6 @@ footer {
 
 .mail-journal {
     margin: 1rem auto;
-
 }
 
 .mail-journal input[type=email] {
@@ -979,14 +973,23 @@ footer {
 
 /* ----------------- A P P O I N T M E N T - P A G E - S T A R T ----------------- */
 
-.appointment {
+#appointment-section {
     padding: 0 0 2rem 0;
 }
 
-.appointment form {
+#appointment-section form {
     width: 500px;
     max-width: 600px;
     width: 100%;
+}
+
+#appointment-section form div article h2 {
+    flex-basis: 100%; 
+    order: -1; 
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5em;
+    margin: 0 0 1rem 0;
 }
 
 .preserved-container {
@@ -997,15 +1000,66 @@ footer {
     margin: 0 0 2rem 0;
 }
 
-.padding-5 {
+#personal-info-first {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+#personal-info-first input {
+    flex: 1;
+    width: calc(50% - 5px);
+}
+
+#personal-info-second {
+    padding: 10px 0 10px 0;
+    gap: 10px
+}
+
+#choices {
+    gap: 10px;
+}
+
+#choices select {
+    padding: 5px 0;
+}
+
+#choices input[type="file"] {
+    color: #fff;
+}
+
+#describe {
+    resize: none;
+    padding: 5px 0 0 5px;
+}
+
+#appointment-date label {
+    padding: 15px 0 15px 5px;
+}
+
+.form-label {
     padding: 5px 0 5px 5px;
 }
 
 .form-input {
     font-size: 18px;
+    padding: 5px 0 5px 5px;
     border-radius: 5px;
     border: none;
     color: #000;
+}
+
+.form-input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+input.flatpickr {
+    cursor: pointer;
+}
+
+.flatpickr {
+    width: 100%;
 }
 
 #appointment-btn {
@@ -1024,93 +1078,6 @@ footer {
     transform: translateX(-2px);
 }
 
-input.flatpickr {
-    cursor: pointer;
-}
-
-.personal-info-first {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0 0 10px 0;
-}
-
-.gap-10 {
-    gap: 10px;
-}
-
-.appointment form h2 {
-    flex-basis: 100%; /* Ensure h3 takes full width */
-    order: -1; /* Position h3 above inputs */
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.5em;
-    margin: 0 0 1rem 0;
-}
-
-.e-number-date {
-    padding: 10px 0 10px 0;
-}
-
-.appointment form .preserved-container .e-number-date select {
-    appearance: none;
-    -webkit-appearance: none; /* For WebKit browsers */
-    -moz-appearance: none; /* For Firefox */
-}
-
-.appointment form .preserved-container .e-number-date select option {
-    background-color: transparent;
-}
-
-.personal-info-first input {
-    flex: 1;
-    width: calc(50% - 5px);
-}
-
-.appointment form input::placeholder {
-    color: rgba(0, 0, 0, 0.83);
-    font-size: 12px;
-}
-
-.appointment form input:focus::placeholder {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.appointment form .name-surname input:first-of-type {
-    margin-right: 10px;
-}
-
-/*Chrome and Safari*/
-.appointment form input[type="number"]::-webkit-inner-spin-button {
-    display: none;
-}
-
-/*Firefox*/
-.appointment form div article input[type=number] {
-    appearance:textfield;
-}
-
-.appointment form div article textarea {
-    resize: none;
-    padding: 5px 0 0 5px;
-}
-
-.appointment form article select {
-    padding: 5px 0;
-}
-
-#uploadfile {
-    color: #fff;
-}
-
-#light-w {
-    background-color: #F8E6D1;
-}
-
-.appointment-date label {
-    padding: 15px 0 15px 5px;
-}
-
 .calendar-icon {
     right: 0.5rem;
     top: 50%;
@@ -1118,24 +1085,20 @@ input.flatpickr {
     font-size: 18px;
 }
 
-.flatpickr{
-    width: 100%;
-}
-
 /* A P P O I N T M E N T - R E S P O N S I V E */
 
 @media (max-width: 768px) {
-    .appointment {
+    #appointment-section {
         padding: 0 10px;
     }
 }
 
 @media (max-width: 650px) {
-    .name-surname {
+    #personal-info-first {
         flex-direction: column;
     }
 
-    .name-surname input {
+    #personal-info-first input {
         width: 100%;
     }
 }
