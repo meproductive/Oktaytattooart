@@ -21,10 +21,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- PIRATA ONE -->
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet"> -->
         <!-- PRATA -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,41 +36,54 @@
     <body>
 
         <!--BACKGROUND SKULL IMAGE-->
-        <div class="wh-100" id="custom-background"></div>
+        <div id="custom-background" class="wh-100"></div>
 
         <!--PAGE WRAPPER-->
-        <div class="custom-content p-relative" id="page-content">
+        
+        <div id="page-content" class="p-relative">
 
             <!--HERO WRAPPER-->
 
-            <div class="d-flex-column" id="hero">
+            <div id="hero" class="d-flex-column">
 
                 <!--SOCIAL ICON MENU-->
 
-                <aside class="j-content-center top-0" id="primary-social">
-                    <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
-                        <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
-                        <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
-                        <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
+                <aside id="primary-social" class="j-content-center top-0">
+
+                    <ul id="icon-menu" class="opacity-animation d-flex j-content-center">
+
+                        <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i id="whatsapp-icon" class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i id="instagram-icon" class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i id="tiktok-icon" class="fa-brands fa-tiktok"></i></a></li>
+                        
                     </ul>
+
                 </aside>
             
                 <!--SOCIAL ICON MENU-->
             
                 <!--HEADER NAVIGATION-->
             
-                <header class="d-flex a-items-center" id="header">
+                <header id="header" class="d-flex a-items-center">
+
                     <h1 id="main-title"><strong>oktaytattooart</strong></h1>
-                    <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
-                        <ul class="d-flex" id="menu">
+
+                    <nav id="navigation" class="opacity-animation" role="navigation" aria-label="main-navigation">
+
+                        <ul id="menu" class="d-flex">
+
                             <li><a href="oktaytattooart-home.html">HOME</a></li>
                             <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
                             <li><a href="oktaytattooart-tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                            <li><a href="oktaytattooart-login.html"><i class="fa-solid fa-user"></i></a></li>
+                            <li><a href="oktaytattooart-blog.html">BLOG</a></li>
+                            <li><a href="oktaytattooart-signin.html"><i class="fa-solid fa-user"></i></a></li>
+
                         </ul>
+
                     </nav>
-                    <i class="a-items-center" id="menu-btn"><span id="hamburger-menu"></span></i>
+
+                    <i id="menu-btn" class="a-items-center"><span id="hamburger-menu"></span></i>
+
                 </header>
 
                 <!--HEADER NAVIGATION-->
@@ -82,388 +91,520 @@
                 
                 <!--VIDEO OVERLAY CONTENT-->
                 
-                <section class="p-absolute top-0" id="intro">
-                    <figure class="p-absolute top-0 wh-100" id="video-container">
-                        <video class="wh-100" id='introVideo' autoplay loop playsinline muted preload="auto">
-                            <source src="resources/videos/introWithSound-light.webm" type="video/webm">
+                <section id="intro" class="p-absolute top-0">
+
+                    <figure id="video-container" class="p-absolute top-0 wh-100">
+
+                        <video id="introVideo" class="wh-100" autoplay loop playsinline muted preload="auto">
+
                             <source src="resources/videos/introWithSound.mp4" type="video/mp4">
+                            <source src="resources/videos/introWithSound-light.webm" type="video/webm">
+
                         </video>
+
                     </figure>
-                    <article class="d-flex p-relative wh-100" id="main-article-content">
-                        <a href="oktaytattooart-appointment.html" class="p-absolute" id="glassy-button">Appointment</a>
+
+                    <article id="main-article-content" class="d-flex p-relative wh-100">
+
+                        <a href="oktaytattooart-appointment.html" id="glassy-button" class="p-absolute">Appointment</a>
+
                         <blockquote class="d-flex-column p-absolute opacity-animation">
+
                             <strong>Ink</strong>
                             <strong>is</strong>
                             <strong>what makes</strong>
                             <strong>you</strong>
                             <strong>different!</strong>
                             <strong><a href="#howtocare">Learn after care details better!</a></strong>
+
                         </blockquote>
+
                     </article>
-                    <i class="fa-solid fa-volume-xmark sound-icon" id="turnSoundOff"></i>
-                    <i class="fa-solid fa-volume-high sound-icon" id="turnSoundOn"></i>
+
+                    <i id="turnSoundOff" class="fa-solid fa-volume-xmark sound-icon"></i>
+                    <i id="turnSoundOn" class="fa-solid fa-volume-high sound-icon"></i>
+
                 </section>
             
                 <!--VIDEO OVERLAY CONTENT-->
 
             </div>
+
             <!--HERO WRAPPER-->
        
 
-        <!--MAIN CONTENT-->
+            <!--MAIN CONTENT-->
 
-        <main id="home-main" role="main">
+            <main id="home-main" role="main">
 
-             <!--TITLE CONTENT-->
+                <!--TITLE CONTENT-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex a-items-center">
-                    <hr class="line">
-                    <h2 class="title first-ts">TATTOOS</h2>
-                    <hr class="line">
-                </article>
-            </section>
+                <section class="title-section">
 
-            <!--TITLE CONTENT-->
-
-            <!--PHOTO GALLERY CONTENT-->
-
-            <section class="d-grid padding-rl-7 j-content-center p-relative" id="photo-gallery">
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">                  
-                    <article class="card-content d-flex-column a-items-center">
-                        <h2 class="tattoo-name">Photo Title 1</h2>
-                        <p class="tattoo-name">Description of photo 1.</p>
+                    <article class="title-wrapper padding-rl-7 d-flex a-items-center">
+                        <hr class="line">
+                        <h2 class="title first-ts">TATTOOS</h2>
+                        <hr class="line">
                     </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 1</h2>
-                        <p class="tattoo-name">Description of photo 1.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>  
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-                <figure class="d-flex-column j-content-center background-color-f" id="photo-card">
-                    <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 2" loading="lazy">
-                    <article class="card-content">
-                        <h2 class="tattoo-name">Photo Title 2</h2>
-                        <p class="tattoo-name">Description of photo 2.</p>
-                    </article>
-                </figure>
-            </section>
-            <div class="d-flex" style="justify-content: flex-end;">
-                <a href="oktaytattooart-tattoo-gallery.html" style="margin-right: 7%;">Go To Gallery ></a>
-                <!-- Add more pages as needed -->
-            </div>
 
-            <!--PHOTO GALLERY CONTENT-->
+                </section>
 
-            <!--SECOND TITLE CONTENT-->
+                <!--TITLE CONTENT-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
-                    <hr class="line">
-                    <h2 class="title second-ts">ARTIST</h2>
-                    <hr class="line">
-                </article>
-            </section>
+                <!--PHOTO GALLERY CONTENT-->
 
-            <!--SECOND TITLE CONTENT-->
+                <section id="photo-gallery" class="d-grid padding-rl-7 j-content-center p-relative">
 
-            <!--ABOUT ME CONTENT-->
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
 
-            <section class="d-flex content-items-center" id="about-me-summary-main">
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy"> 
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">    
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">    
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">   
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">   
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">       
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>                    
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                    <figure id="photo-card" class="d-flex-column j-content-center background-color-f">
+
+                        <img src="resources/images/cat-tattoo.jpg" alt="Description of photo 1" loading="lazy">   
+
+                        <article class="card-content d-flex-column a-items-center">
+
+                            <h2 class="tattoo-name">Photo Title 1</h2>
+                            <p class="tattoo-name">Description of photo 1.</p>
+
+                        </article>
+
+                    </figure>
+
+                </section>
+                <div class="d-flex" style="justify-content: flex-end;">
+
+                    <a href="oktaytattooart-tattoo-gallery.html" style="margin-right: 7%;">Go To Gallery ></a>
+                    <!-- Add more pages as needed -->
+                </div>
+
+                <!--PHOTO GALLERY CONTENT-->
+
+                <!--SECOND TITLE CONTENT-->
+
+                <section class="title-section">
+
+                    <article class="title-wrapper padding-rl-7 d-flex content-items-center">
+                        <hr class="line">
+                        <h2 class="title second-ts">ARTIST</h2>
+                        <hr class="line">
+                    </article>
+
+                </section>
+
+                <!--SECOND TITLE CONTENT-->
+
+                <!--ABOUT ME CONTENT-->
+
+                <section id="about-me-summary-main" class="d-flex content-items-center">
+
                     <figure class="profile-figure">
+
                         <img src="resources/images/bio-profile.jpg" alt="Your Name" class="profile-photo" loading="lazy">
                         <figcaption class="color-f">Oktay Yildirim</figcaption>
+
                     </figure>
+
                     <article class="about-me-summary">
+
                         <h2>About Me</h2>
                         <p>I am a tattoo artist with 15 years of experience, skilled in all styles, focused on customer satisfaction, and working in a completely sterile environment with a professional approach. I started my craft in Turkiye, provided academic training, and helped nurture new artists. Now, as a 4-time award-winning tattoo artist, I have moved to the United States to showcase my art to the world.</p>
+
                     </article>
-            </section>
 
-            <!--ABOUT ME CONTENT-->
+                </section>
 
-            <!--THIRD TITLE CONTENT-->
+                <!--ABOUT ME CONTENT-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
-                    <hr class="line">
-                    <h2 class="title third-ts">POPULAR TATTOOS</h2>
-                    <hr class="line">
-                </article>
-            </section>
+                <!--THIRD TITLE CONTENT-->
 
-            <!--THIRD TITLE CONTENT-->
+                <section class="title-section">
 
-            <!--POPULAR TATTOOS CONTENT-->
+                    <article class="title-wrapper padding-rl-7 d-flex content-items-center">
+                        <hr class="line">
+                        <h2 class="title third-ts">POPULAR TATTOOS</h2>
+                        <hr class="line">
+                    </article>
 
-            <section id="popular-tattoo-gallery">
-                <div class="gallery-container d-flex" id="gallery-container" role="scrollbar" aria-label="Popular tattoo gallery, scroll horizontally to view images">
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="resources/images/cat-tattoo.jpg" loading="lazy">
-                    </figure>
-                </div>
-            </section>
+                </section>
 
-            <!--POPULAR TATTOOS CONTENT-->
+                <!--THIRD TITLE CONTENT-->
 
-            <!--FOURTH TITLE CONTENT-->
+                <!--POPULAR TATTOOS CONTENT-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
-                    <hr class="line">
-                    <h2 class="title fourth-ts">MY AWARDS</h2>
-                    <hr class="line">
-                </article>
-            </section>
+                <section id="popular-tattoo-gallery">
 
-            <!--FOURTH TITLE CONTENT-->
+                    <div id="gallery-container" class="gallery-container d-flex" role="scrollbar" aria-label="Popular tattoo gallery, scroll horizontally to view images">
 
-            <!--AWARDS CONTENT-->
-
-            <section class="d-flex p-relative" id="carousel-container">
-                <button class="carousel-control left p-absolute" id="left">‹</button>
-                <div class="carousel d-flex a-items-center" role="slider">
-                    <div class="carousel-item d-flex-column">
-                        <figure class="d-flex j-content-center">
-                            <img src="resources/images/award-no-bg.png" alt="Award 1">
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
                         </figure>
-                        <article id="award-description">
-                            <p>My first place award-winning</p>
-                        </article>
-                    </div>
-                    <div class="carousel-item d-flex-column">
-                        <figure class="d-flex j-content-center">
-                            <img src="resources/images/award-no-bg.png" alt="Award 1">
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
                         </figure>
-                        <article id="award-description">
-                            <p>My first place award-winning</p>
-                        </article>
-                    </div>
-                    <div class="carousel-item d-flex-column">
-                        <figure class="d-flex j-content-center">
-                            <img src="resources/images/award-no-bg.png" alt="Award 1">
+                        
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
                         </figure>
-                        <article id="award-description">
-                            <p>My first place award-winning</p>
-                        </article>
-                    </div>
-                    <div class="carousel-item d-flex-column">
-                        <figure class="d-flex j-content-center">
-                            <img src="resources/images/award-no-bg.png" alt="Award 1">
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
                         </figure>
-                        <article id="award-description">
-                            <p>My first place award-winning</p>
-                        </article>
-                    </div>
-                    <div class="carousel-item d-flex-column">
-                        <figure class="d-flex j-content-center">
-                            <img src="resources/images/award-no-bg.png" alt="Award 1">
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
                         </figure>
-                        <article id="award-description">
-                            <p>My first place award-winning</p>
-                        </article>
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
+                        </figure>
+
+                        <figure class="gallery-item">
+                            <img src="resources/images/cat-tattoo.jpg" loading="lazy">
+                        </figure>
+
                     </div>
-                </div>
-                <button class="carousel-control right p-absolute"  id="right">›</button>
-            </section>
 
-            <!--AWARDS CONTENT-->
+                </section>
 
-            <!--FIFTH TITLE CONTENT-->
+                <!--POPULAR TATTOOS CONTENT-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
-                    <hr class="line">
-                    <h2 class="title fifth-ts">AFTER CARE</h2>
-                    <hr class="line">
-                </article>
-            </section>
+                <!--FOURTH TITLE CONTENT-->
 
-            <!--FIFTH TITLE CONTENT-->
+                <section class="title-section">
 
-            <!-- TEXT CONTENT -->
+                    <article class="title-wrapper padding-rl-7 d-flex content-items-center">
+                        <hr class="line">
+                        <h2 class="title fourth-ts">MY AWARDS</h2>
+                        <hr class="line">
+                    </article>
 
-            <section class="text-content padding-rl-7" id="howtocare">
-                <article class="d-flex-column" id="text-container">
-                    <section class="tattoo-aftercare">
-                        <h2>🧴 Tattoo Aftercare Guide: How to Heal Your Tattoo Properly</h2>
-                      
-                        <p>Getting a tattoo is exciting, but proper aftercare is <strong>essential</strong> to ensure it heals well and looks great for years to come. Here's a step-by-step guide to caring for your new ink.</p>
-                      
-                        <h3>✨ 1. Right After the Tattoo Session</h3>
-                        <ul class="styled-list">
-                          <li><strong>Leave the bandage on</strong> for 2 to 24 hours, as advised by your artist.</li>
-                          <li>Avoid touching or scratching the area with unwashed hands.</li>
-                        </ul>
-                      
-                        <h3>💦 2. First Wash (After Removing the Bandage)</h3>
-                        <p><strong>When:</strong> 2 to 24 hours after getting the tattoo.</p>
-                        <ol class="styled-list">
-                          <li>Wash your hands thoroughly.</li>
-                          <li>Gently wash the tattoo using <strong>lukewarm water</strong> and <strong>fragrance-free, antibacterial soap</strong>.</li>
-                          <li>Pat dry with a <strong>clean paper towel</strong> or let it air dry.</li>
-                          <li>Let your tattoo breathe for a bit before applying ointment.</li>
-                        </ol>
-                      
-                        <h3>🧴 3. Applying Aftercare Ointment</h3>
-                        <p><strong>Frequency:</strong> 2–3 times daily for the first 3–5 days.</p>
-                        <ul class="styled-list">
-                          <li>Use a <strong>thin layer</strong> of a recommended tattoo aftercare product.</li>
-                          <li><strong>Do not over-apply</strong> — it can suffocate the tattoo and delay healing.</li>
-                        </ul>
-                      
-                        <h3>🌿 4. The Peeling Phase (Days 4–14)</h3>
-                        <ul class="styled-list">
-                          <li>Your tattoo will scab or peel — <strong>don’t pick or scratch</strong>.</li>
-                          <li>Keep the area moisturized with a light, fragrance-free lotion.</li>
-                          <li>Continue gentle washing once or twice a day.</li>
-                        </ul>
-                      
-                        <h3>☀️ 5. General Healing Tips (First 2–4 Weeks)</h3>
-                        <p><strong>✅ Do:</strong></p>
-                        <ul class="styled-list">
-                          <li>Wear loose, breathable clothing.</li>
-                          <li>Stay hydrated and eat well.</li>
-                        </ul>
-                      
-                        <p><strong>❌ Don’t:</strong></p>
-                        <ul class="styled-list">
-                          <li>No swimming in pools, hot tubs, lakes, or oceans.</li>
-                          <li>No direct sunlight or tanning on the tattoo.</li>
-                          <li>Avoid heavy workouts for the first few days.</li>
-                        </ul>
-                      
-                        <h3>⏳ 6. Long-Term Care (After It Heals)</h3>
-                        <ul class="styled-list">
-                          <li>Moisturize regularly to keep skin healthy and vibrant.</li>
-                          <li>Use sunscreen (SPF 30+) whenever the tattoo is exposed to the sun.</li>
-                        </ul>
-                      
-                        <h3>🩺 When to Contact a Professional</h3>
-                        <ul class="styled-list">
-                          <li>Severe redness, swelling, or warmth around the tattoo</li>
-                          <li>Foul odor or pus</li>
-                          <li>Red streaks or fever/chills</li>
-                        </ul>
-                      
-                        <h3>📌 Summary: Your Tattoo Aftercare Checklist</h3>
-                        <div class="aftercare-table">
-                          <div class="row header">
-                            <div>Timeframe</div>
-                            <div>Care Instructions</div>
-                          </div>
-                          <div class="row">
-                            <div>First 24 hrs</div>
-                            <div>Keep bandage on, clean gently</div>
-                          </div>
-                          <div class="row">
-                            <div>Days 1–5</div>
-                            <div>Clean 2x/day, apply thin ointment</div>
-                          </div>
-                          <div class="row">
-                            <div>Days 5–14</div>
-                            <div>Moisturize, don’t pick flakes</div>
-                          </div>
-                          <div class="row">
-                            <div>Weeks 2–4</div>
-                            <div>Avoid sun, swimming, friction</div>
-                          </div>
-                          <div class="row">
-                            <div>After healing</div>
-                            <div>Use sunscreen, moisturize</div>
-                          </div>
+                </section>
+
+                <!--FOURTH TITLE CONTENT-->
+
+                <!--AWARDS CONTENT-->
+
+                <section id="carousel-container" class="d-flex p-relative">
+
+                    <button id="left" class="carousel-control left p-absolute">‹</button>
+
+                    <div class="carousel d-flex a-items-center" role="slider">
+
+                        <div class="carousel-item d-flex-column">
+
+                            <figure class="d-flex j-content-center">
+                                <img src="resources/images/award-no-bg.png" alt="Award 1">
+                            </figure>
+
+                            <article id="award-description">
+                                <p>My first place award-winning</p>
+                            </article>
+
                         </div>
-                      </section>
-                </article>
-                <div class="d-flex" style="justify-content: flex-end; padding: 1rem 0;">
-                    <a href="#">Learn more about tattoo ></a>
-                </div>
-            </section>
 
-            <!-- TEXT CONTENT -->
+                        <div class="carousel-item d-flex-column">
+
+                            <figure class="d-flex j-content-center">
+                                <img src="resources/images/award-no-bg.png" alt="Award 1">
+                            </figure>
+
+                            <article id="award-description">
+                                <p>My first place award-winning</p>
+                            </article>
+
+                        </div>
+
+                        <div class="carousel-item d-flex-column">
+
+                            <figure class="d-flex j-content-center">
+                                <img src="resources/images/award-no-bg.png" alt="Award 1">
+                            </figure>
+
+                            <article id="award-description">
+                                <p>My first place award-winning</p>
+                            </article>
+
+                        </div>
+
+                        <div class="carousel-item d-flex-column">
+                            
+                            <figure class="d-flex j-content-center">
+                                <img src="resources/images/award-no-bg.png" alt="Award 1">
+                            </figure>
+
+                            <article id="award-description">
+                                <p>My first place award-winning</p>
+                            </article>
+
+                        </div>
+
+                        <div class="carousel-item d-flex-column">
+
+                            <figure class="d-flex j-content-center">
+                                <img src="resources/images/award-no-bg.png" alt="Award 1">
+                            </figure>
+
+                            <article id="award-description">
+                                <p>My first place award-winning</p>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <button id="right" class="carousel-control right p-absolute">›</button>
+
+                </section>
+
+                <!--AWARDS CONTENT-->
+
+                <!--FIFTH TITLE CONTENT-->
+
+                <section class="title-section">
+
+                    <article class="title-wrapper padding-rl-7 d-flex content-items-center">
+                        <hr class="line">
+                        <h2 class="title fifth-ts">AFTER CARE</h2>
+                        <hr class="line">
+                    </article>
+
+                </section>
+
+                <!--FIFTH TITLE CONTENT-->
+
+                <!-- TEXT CONTENT -->
+
+                <section id="howtocare" class="text-content padding-rl-7">
+
+                    <article id="text-container" class="d-flex-column">
+
+                        <section class="tattoo-aftercare">
+
+                            <h2>🧴 Tattoo Aftercare Guide: How to Heal Your Tattoo Properly</h2>
+                        
+                            <p>Getting a tattoo is exciting, but proper aftercare is <strong>essential</strong> to ensure it heals well and looks great for years to come. Here's a step-by-step guide to caring for your new ink.</p>
+                        
+                            <h3>✨ 1. Right After the Tattoo Session</h3>
+                            <ul class="styled-list">
+                              <li><strong>Leave the bandage on</strong> for 2 to 24 hours, as advised by your artist.</li>
+                              <li>Avoid touching or scratching the area with unwashed hands.</li>
+                            </ul>
+                        
+                            <h3>💦 2. First Wash (After Removing the Bandage)</h3>
+                            <p><strong>When:</strong> 2 to 24 hours after getting the tattoo.</p>
+                            <ol class="styled-list">
+                              <li>Wash your hands thoroughly.</li>
+                              <li>Gently wash the tattoo using <strong>lukewarm water</strong> and <strong>fragrance-free, antibacterial soap</strong>.</li>
+                              <li>Pat dry with a <strong>clean paper towel</strong> or let it air dry.</li>
+                              <li>Let your tattoo breathe for a bit before applying ointment.</li>
+                            </ol>
+                        
+                            <h3>🧴 3. Applying Aftercare Ointment</h3>
+                            <p><strong>Frequency:</strong> 2–3 times daily for the first 3–5 days.</p>
+                            <ul class="styled-list">
+                              <li>Use a <strong>thin layer</strong> of a recommended tattoo aftercare product.</li>
+                              <li><strong>Do not over-apply</strong> — it can suffocate the tattoo and delay healing.</li>
+                            </ul>
+                        
+                            <h3>🌿 4. The Peeling Phase (Days 4–14)</h3>
+                            <ul class="styled-list">
+                              <li>Your tattoo will scab or peel — <strong>don’t pick or scratch</strong>.</li>
+                              <li>Keep the area moisturized with a light, fragrance-free lotion.</li>
+                              <li>Continue gentle washing once or twice a day.</li>
+                            </ul>
+                        
+                            <h3>☀️ 5. General Healing Tips (First 2–4 Weeks)</h3>
+                            <p><strong>✅ Do:</strong></p>
+                            <ul class="styled-list">
+                              <li>Wear loose, breathable clothing.</li>
+                              <li>Stay hydrated and eat well.</li>
+                            </ul>
+                        
+                            <p><strong>❌ Don’t:</strong></p>
+                            <ul class="styled-list">
+                              <li>No swimming in pools, hot tubs, lakes, or oceans.</li>
+                              <li>No direct sunlight or tanning on the tattoo.</li>
+                              <li>Avoid heavy workouts for the first few days.</li>
+                            </ul>
+                        
+                            <h3>⏳ 6. Long-Term Care (After It Heals)</h3>
+                            <ul class="styled-list">
+                              <li>Moisturize regularly to keep skin healthy and vibrant.</li>
+                              <li>Use sunscreen (SPF 30+) whenever the tattoo is exposed to the sun.</li>
+                            </ul>
+                        
+                            <h3>🩺 When to Contact a Professional</h3>
+                            <ul class="styled-list">
+                              <li>Severe redness, swelling, or warmth around the tattoo</li>
+                              <li>Foul odor or pus</li>
+                              <li>Red streaks or fever/chills</li>
+                            </ul>
+                        
+                            <h3>📌 Summary: Your Tattoo Aftercare Checklist</h3>
+                            <div class="aftercare-table">
+                              <div class="row header">
+                                <div>Timeframe</div>
+                                <div>Care Instructions</div>
+                              </div>
+                              <div class="row">
+                                <div>First 24 hrs</div>
+                                <div>Keep bandage on, clean gently</div>
+                              </div>
+                              <div class="row">
+                                <div>Days 1–5</div>
+                                <div>Clean 2x/day, apply thin ointment</div>
+                              </div>
+                              <div class="row">
+                                <div>Days 5–14</div>
+                                <div>Moisturize, don’t pick flakes</div>
+                              </div>
+                              <div class="row">
+                                <div>Weeks 2–4</div>
+                                <div>Avoid sun, swimming, friction</div>
+                              </div>
+                              <div class="row">
+                                <div>After healing</div>
+                                <div>Use sunscreen, moisturize</div>
+                              </div>
+                            </div>
+                          </section>
+
+                    </article>
+
+                <div class="d-flex" style="justify-content: flex-end; padding: 1rem 0;">
+
+                    <a href="oktaytattooart-blog.html">Learn more about tattoo ></a>
+
+                </div>
+
+                </section>
+
+                <!-- TEXT CONTENT -->
 
             </main>
 
@@ -472,38 +613,43 @@
             <!--FOOTER CONTENT-->
 
             <footer>
-              <section id="footer-container" class="d-flex-column a-items-center">
-                  <h3 id="footer-text">Get Last Offers!</h3>
-                  <form id="border" action="post" class="d-flex mail-journal">
-                      <input type="email" name="e-mail" placeholder="type your e-mail">
-                      <input class="form-btn btn-pad-rl-1" type="submit" value="submit">
-                  </form>
-                  <nav id="footer-nav" class="d-flex">
-                    <!-- <h2 style="text-align: center;">SOCIAL</h2> -->
-                    <ul id="social-medias" class="social-medias d-flex">
-                        <li>
-                            <a href="#" class="d-flex content-items-center">Instagram 
-                                <i class="fa-brands fa-instagram ins-footer"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="d-flex content-items-center">WhatsApp 
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" id="ttok" class="d-flex content-items-center">TikT<span class="p-relative" id="letter-effect">o</span>k
-                                <i class="fa-brands fa-tiktok" id="tiktok"></i>
-                            </a>
-                        </li>
-                    </ul>
-                  </nav>
-              </section>
+
+                <section id="footer-container" class="d-flex-column a-items-center">
+                
+                    <nav id="footer-nav" class="d-flex" aria-label="footer-navigation">
+                    
+                        <ul id="social-medias" class="d-flex">
+                        
+                            <li>
+                                <a href="#" class="d-flex a-items-center">Instagram 
+                                    <i class="fa-brands fa-instagram ins-footer"></i>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="#" class="d-flex a-items-center">WhatsApp 
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#" class="d-flex a-items-center">TikT<span class="p-relative" id="letter-effect">o</span>k
+                                    <i class="fa-brands fa-tiktok" id="tiktok"></i>
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    
+                    </nav>
+                    
+                </section>
+
             </footer>
 
             <!--FOOTER CONTENT-->
             
         </div>
+        
         <!--PAGE WRAPPER-->
         
     </body>

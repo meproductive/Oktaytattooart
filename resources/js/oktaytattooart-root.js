@@ -27,5 +27,3 @@ const body = document.body;
     menuButton.addEventListener('click', openNavigation);
 
     document.addEventListener('click', closeNavigation);
-
-    

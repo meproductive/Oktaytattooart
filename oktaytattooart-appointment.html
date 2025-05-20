@@ -43,167 +43,230 @@
     <body>
        
        <!--BACKGROUND SKULL IMAGE-->
-       <div class="wh-100" id="custom-background"></div>
+       <div id="custom-background" class="wh-100"></div>
 
        <!--PAGE WRAPPER-->
-       <div class="p-relative" id="page-content">
 
-           <!--HERO WRAPPER-->
+       <div id="page-content" class="p-relative">
 
-           <div class="d-flex-column">
+            <!--HEADER WRAPPER-->
+ 
+            <div class="d-flex-column">
+ 
+                <!--SOCIAL ICON MENU-->
+ 
+                <aside id="primary-social" class="j-content-center" style="background-color: rgba(0, 0, 0, 0.9);">
 
-               <!--SOCIAL ICON MENU-->
-
-               <aside class="j-content-center" id="primary-social" style="background-color: rgba(0, 0, 0, 0.9);">
                    <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
+
                        <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
                        <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
                        <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
+
                    </ul>
-               </aside>
-           
-               <!--SOCIAL ICON MENU-->
-           
-               <!--HEADER NAVIGATION-->
-           
-               <header class="d-flex a-items-center" id="header" style="background-color: rgba(0, 0, 0, 0.9);">
+                   
+                </aside>
+            
+                <!--SOCIAL ICON MENU-->
+            
+                <!--HEADER NAVIGATION-->
+            
+                <header id="header" class="d-flex a-items-center" style="background-color: rgba(0, 0, 0, 0.9);">
+
                    <h1 id="main-title"><strong>oktaytattooart</strong></h1>
-                   <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
-                       <ul class="d-flex" id="menu">
+
+                   <nav id="navigation" class="opacity-animation" role="navigation" aria-label="main-navigation">
+
+                       <ul id="menu" class="d-flex">
+
                            <li><a href="oktaytattooart-home.html">HOME</a></li>
                            <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
-                           <li><a href="tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
-                           <li><a href="#">CONTACT</a></li>
-                       </ul>
+                           <li><a href="oktaytattooart-tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
+                           <li><a href="oktaytattooart-blog.html" aria-label="Learn what is a tattoo">BLOG</a></li>
+                           <li><a href="oktaytattooart-signin.html"><i class="fa-solid fa-user"></i></a></li>
+
+                      </ul>
+
                    </nav>
-                   <i class="a-items-center" id="menu-btn"><span id="hamburger-menu"></span></i>
-               </header>
 
-               <!--HEADER NAVIGATION-->
-           </div>
+                   <i id="menu-btn" class="a-items-center"><span id="hamburger-menu"></span></i>
 
-        <!--MAIN CONTENT SECTION-->
+                </header>
+ 
+                <!--HEADER NAVIGATION-->
 
-        <main id="appointment-main">
+            </div>
+            
+            <!--HEADER WRAPPER-->
 
-            <section class="title-section">
-                <article class="title-wrapper padding-rl-7 d-flex content-items-center">
-                    <hr class="line background-color-f">
-                    <h2 class="title second-ts color-f">APPOINTMENT</h2>
-                    <hr class="line background-color-f">
-                </article>
-            </section>
+            <!--MAIN CONTENT-->
+           
+            <main class="padding-rl-7">
 
-            <section id="appointment-section" class="d-flex content-items-center">
+                <section class="title-section">
 
-                <form class="d-flex-column content-items-center" action="#">
+                    <article class="title-wrapper d-flex content-items-center">
+                        <hr class="line background-color-f">
+                        <h2 class="title second-ts color-f">APPOINTMENT</h2>
+                        <hr class="line background-color-f">
+                    </article>
 
-                        <div id="personal-info-container" class="preserved-container" >
+                </section>
 
-                            <article id="personal-info-first" class="d-flex">
+                <section id="appointment-section" class="d-flex content-items-center">
 
-                                <h2>PERSONAL INFORMATION</h2>
+                    <form class="d-flex-column content-items-center" action="#">
 
-                                <label class="form-label " for="firstname">NAME</label>
-                                <input id="firstname" class="form-input" type="text" name="firstname" required>
+                            <div class="form-container">
 
-                                <label class="form-label " for="surname">SURNAME</label>
-                                <input id="surname" class="form-input" type="text" name="surname" required>
+                                <article id="personal-info-first" class="d-flex">
 
-                            </article>
+                                    <h2>PERSONAL INFORMATION</h2>
 
-                            <article id="personal-info-second" class="d-flex-column">
+                                    <label for="firstname">NAME</label>
+                                    <input id="firstname" type="text" name="firstname" required>
 
-                                <label class="form-label" for="email">E-MAIL</label>
-                                <input id="email" class="form-input" type="email" name="email" autocomplete="off" required>
+                                    <label for="surname">SURNAME</label>
+                                    <input id="surname" type="text" name="surname" required>
 
-                                <label class="form-label " for="phonenumber">PHONE NUMBER</label>
-                                <input id="phonenumber" class="form-input" type="tel" name="phonenumber" pattern="^\d{10,15}$" minlength="10" maxlength="15" inputmode="numeric" title="Enter a valid phone number" required>
+                                </article>
 
-                                <label class="form-label" for="birthday">BIRTHDAY</label>
-                                <div class="d-flex p-relative">
-                                    <input id="birthday" class="form-input flatpickr" type="text" name="birthdayid" placeholder="Pick your birthday" required>                        
-                                    <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
-                                </div>
-                                <div id="birth-warning" style="color: red; margin-top: 5px;"></div>
+                                <article id="personal-info-second" class="d-flex-column">
 
-                            </article>
+                                    <label for="email">E-MAIL</label>
+                                    <input id="email" type="email" name="email" autocomplete="off" required>
 
-                        </div>
+                                    <label for="phonenumber">PHONE NUMBER</label>
+                                    <input id="phonenumber" type="tel" name="phonenumber" pattern="^\d{10,15}$" minlength="10" maxlength="15" inputmode="numeric" title="Enter a valid phone number" required>
 
-                        <div class="preserved-container">
+                                    <label for="birthday">BIRTHDAY</label>
+                                    <div class="d-flex p-relative">
 
-                            <article id="choices" class="d-flex-column">
+                                        <input id="birthday" class="flatpickr" type="text" name="birthdayid" placeholder="Pick your birthday" required>                        
+                                        <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
 
-                                <h2>CHOICES</h2>
+                                    </div>
+                                    <div id="birth-warning" style="color: red; margin-top: 5px;"></div>
 
-                                <label class="form-label" for="favouritetattoos">FAVORITE TATTOO STYLES(optional)</label>
-                                <select id="favouritetattoos" class="select2" name="SelectedCategoryIds" multiple="multiple" data-placeholder="Select your best tattoo styles">
-                                    <option value="1">MINIMAL</option>
-                                    <option value="2">COLORED</option>
-                                    <option value="3">TRIBAL</option>
-                                    <option value="4">COVERUP</option>
-                                </select>
+                                </article>
 
-                                <label class="form-label " for="describe">DESCRIBE IT(optional)</label>
-                                <textarea id="describe" name="describe" placeholder="Describe your tattoo idea – maybe it's a roaring tiger with floral patterns or a galaxy hidden in an eye. Let your imagination flow." rows="5" cols="50"></textarea>
+                            </div>
 
-                                <label class="form-label " name="file" for="uploadfile">VISUALIZE IT(optional)</label>
-                                <input id="uploadfile" class="form-input" type="file" name="uploadfile" accept=".jpg, .jpeg, .png">   
+                            <div class="form-container">
 
-                                <label class="form-label" for="tattooPlacement" >Tattoo Placement</label>
-                                <select id="tattooPlacement" name="SelectedBodyPartId" class="select2" data-placeholder="Select a body part">
-                                    <option></option>
-                                    <option value="1">Arm</option>
-                                    <option value="2">Back</option>
-                                    <option value="3">Chest</option>
-                                    <option value="4">Leg</option>
-                                </select>
+                                <article id="choices" class="d-flex-column">
 
-                            </article>
+                                    <h2>CHOICES</h2>
 
-                        </div>
+                                    <label for="favouritetattoos">FAVORITE TATTOO STYLES(optional)</label>
+                                    <select id="favouritetattoos" class="select2" name="SelectedCategoryIds" multiple="multiple" data-placeholder="Select your favorite tattoo styles">
 
-                        <div class="preserved-container" id="appointment-container">
+                                        <option value="1">MINIMAL</option>
+                                        <option value="2">COLORED</option>
+                                        <option value="3">TRIBAL</option>
+                                        <option value="4">COVERUP</option>
 
-                            <article id="appointment-date" class="d-flex-column">
+                                    </select>
 
-                                <h2>APPOINTMENT DATE</h2>
+                                    <label for="describe">DESCRIBE IT(optional)</label>
+                                    <textarea id="describe" name="describe" placeholder="Describe your tattoo idea – maybe it's a roaring tiger with floral patterns or a galaxy hidden in an eye. Let your imagination flow." rows="5" cols="50"></textarea>
 
-                                <label class="form-label" for="appointment">Appointment date</label>
-                                <div class="d-flex p-relative">
-                                    <input id="appointment" class="form-input flatpickr" name="appointment" type="text" placeholder="Select appointment date" required>
-                                    <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
-                                </div>
+                                    <label name="file" for="uploadfile">VISUALIZE IT(optional)</label>
+                                    <input id="uploadfile" type="file" name="uploadfile" accept=".jpg, .jpeg, .png">   
 
-                            </article>
+                                    <label for="tattooPlacement" >Tattoo Placement</label>
+                                    <select id="tattooPlacement" name="SelectedBodyPartId" class="select2" data-placeholder="Select a body part">
 
-                        </div>
+                                        <option></option>
+                                        <option value="1">Arm</option>
+                                        <option value="2">Back</option>
+                                        <option value="3">Chest</option>
+                                        <option value="4">Leg</option>
 
-                        <!-- Honeypot field -->
-                        <div style="display: none;">
+                                    </select>
 
-                            <label for="website">Website</label>
-                            <input id="website" type="text" name="website" tabindex="-1" autocomplete="off">
+                                </article>
 
-                        </div>
+                            </div>
 
-                    <input class="form-btn" class="form-input" type="submit" value="submit">
+                            <div class="form-container">
 
-                </form>
+                                <article id="appointment-date" class="d-flex-column">
 
-            </section>
+                                    <h2>APPOINTMENT DATE</h2>
 
-        </main>
+                                    <label for="appointment">Appointment date</label>
+                                    <div class="d-flex p-relative">
 
-        <!--MAIN CONTENT SECTION-->
+                                        <input id="appointment" class="flatpickr" name="appointment" type="text" placeholder="Select appointment date" required>
+                                        <i class="fa-regular fa-calendar p-absolute calendar-icon"></i>
 
-        
-        <!--FOOTER CONTENT SECTION-->
-        <footer>
-        </footer>
-        <!--FOOTER CONTENT SECTION-->
-        </div>
+                                    </div>
+
+                                </article>
+
+                            </div>
+
+                            <!-- Honeypot field -->
+                            <div style="display: none;">
+
+                                <label for="website">Website</label>
+                                <input id="website" type="text" name="website" tabindex="-1" autocomplete="off">
+                            
+                            </div>
+
+                        <input class="btn-primary button3D" type="submit" value="submit" style="margin-bottom: 2rem;">
+
+                    </form>
+
+                </section>
+
+            </main>
+           
+            <!--MAIN CONTENT-->
+           
+            
+            <!--FOOTER CONTENT-->
+
+            <footer>
+
+                <section id="footer-container" class="d-flex-column a-items-center">
+
+                    <nav id="footer-nav" class="d-flex" aria-label="footer-navigation">
+
+                        <ul id="social-medias" class="d-flex">
+
+                            <li>
+                                <a href="#" class="d-flex a-items-center">Instagram 
+                                    <i class="fa-brands fa-instagram ins-footer"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="d-flex a-items-center">WhatsApp 
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="d-flex a-items-center">TikT<span class="p-relative" id="letter-effect">o</span>k
+                                    <i class="fa-brands fa-tiktok" id="tiktok"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </section>
+               
+            </footer>
+            
+            <!--FOOTER CONTENT-->
+
+       </div>
+
+       <!--PAGE WRAPPER-->
 
     </body>
 

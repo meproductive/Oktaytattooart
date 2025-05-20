@@ -13,10 +13,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- PIRATA ONE -->
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet"> -->
         <!-- PRATA -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,98 +21,150 @@
         <!-- JAVASCRIPT -->
         <script src="resources/js/oktaytattooart-root.js" defer></script>
 
-
+        <title>Sign Up | OktayTattooArt</title>
     </head>
-    <body id="login-body">
+
+    <body>
 
         <!--BACKGROUND SKULL IMAGE-->
-        <div class="wh-100" id="custom-background"></div>
+        <div id="custom-background" class="wh-100"></div>
     
         <!--PAGE WRAPPER-->
-        <div class="custom-page p-relative" id="page-content">
 
-            <div class="d-flex-column" id="">
+        <div id="page-content" class="full-page-layout d-flex p-relative">
 
-            <aside class="j-content-center top-0" id="primary-social" style="background-color: rgba(0, 0, 0, 0.9);">
-                <ul class="opacity-animation d-flex j-content-center" id="icon-menu">
-                    <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
-                    <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
-                    <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
-                </ul>
-            </aside>
-        
-            <!--SOCIAL ICON MENU-->
-        
-            <!--HEADER NAVIGATION-->
-        
-            <header class="d-flex a-items-center" id="header" style="background-color: rgba(0, 0, 0, 0.9);">
-                <h1 id="main-title"><strong>oktaytattooart</strong></h1>
-                <nav class="opacity-animation" id="navigation" role="navigation" aria-label="main-navigation">
-                    <ul class="d-flex" id="menu">
-                        <li><a href="oktaytattooart-home.html">HOME</a></li>
-                        <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
-                        <li><a href="oktaytattooart-tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
-                        <li><a href="#">CONTACT</a></li>
+            <!--HEADER WRAPPER-->
+
+            <div class="d-flex-column">
+
+                <!--SOCIAL ICON MENU-->
+
+                <aside id="primary-social" class="j-content-center top-0" style="background-color: rgba(0, 0, 0, 0.9);">
+
+                    <ul id="icon-menu" class="opacity-animation d-flex j-content-center">
+
+                        <li><a href="https://wa.me/your-number" aria-label="Contact me on WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" id="whatsapp-icon"></i></a></li>
+                        <li><a href="https://instagram.com/yourprofile" aria-label="Follow me on Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" id="instagram-icon"></i></a></li>
+                        <li><a href="https://tiktok.com/@" aria-label="Watch my TikTok videos" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok" id="tiktok-icon"></i></a></li>
+                        
                     </ul>
-                </nav>
-                <i class="a-items-center" id="menu-btn"><span id="hamburger-menu"></span></i>
-            </header>
 
-            <!--HEADER NAVIGATION-->
+                </aside>
+            
+                <!--SOCIAL ICON MENU-->
+            
+                <!--HEADER NAVIGATION-->
+            
+                <header id="header" class="d-flex a-items-center" style="background-color: rgba(0, 0, 0, 0.9);">
+
+                    <h1 id="main-title"><strong>oktaytattooart</strong></h1>
+
+                    <nav id="navigation" class="opacity-animation" role="navigation" aria-label="main-navigation">
+
+                        <ul id="menu" class="d-flex">
+
+                            <li><a href="oktaytattooart-home.html">HOME</a></li>
+                            <li><a href="about-oktay-tattoo-artist.html" aria-label="Learn more about Oktay">ABOUT ME</a></li>
+                            <li><a href="oktaytattooart-tattoo-gallery.html" aria-label="See more of Oktay's work">GALLERY</a></li>
+                            <li><a href="oktaytattooart-blog.html" aria-label="Learn what is a tattoo">BLOG</a></li>
+                            <li><a href="oktaytattooart-signin.html"><i class="fa-solid fa-user"></i></a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <i id="menu-btn" class="a-items-center"><span id="hamburger-menu"></span></i>
+
+                </header>
+
+                <!--HEADER NAVIGATION-->
 
             </div>
 
-            <main id="login-main" class="d-flex-column content-items-center">
-                <section id="anchor-section">
-                    <form id="anchor-form" class="d-flex">
-                        <a href="oktaytattooart-login.html" id="signin" class="nav-link">Sign In</a>
-                        <a href="oktaytattooart-signup.html" id="signup" class="nav-link">Sign Up</a>
+            <!--HEADER WRAPPER-->
+
+            <!--MAIN CONTENT-->
+
+            <main class="d-flex-column content-items-center flex-grow-1 padding-rl-7">
+
+                <section class="container user-section">
+
+                    <h2>Join Better Tattoo Experience</h2>
+
+                    <div class="anchor-section d-flex">
+
+                        <a href="oktaytattooart-signin.html" id="signin" class="button3D nav-link">Sign In</a>
+
+                        <a href="oktaytattooart-signup.html" id="signup" class="button3D nav-link">Sign Up</a>
+
+                    </div>
+
+                    <form class="form-container d-flex-column" method="#">
+
+                        <label for="username">Email adress</label>
+                        <input id="username" name="username" type="text"/>
+
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password"/>
+
+                        <label for="confirm-password">Confirm password</label>
+                        <input id="confirm-password" name="confirm-password" type="password"/>
+
+                        <input class="btn-primary button3D" type="submit" value="Sign Up"/>
+
+                        <p id="account-link">Have an account already? <a href="oktaytattooart-signup.html">Sign In</a></p>
+
+                        <a href="#" id="signingoogle">Sign in with Google</a>
+
                     </form>
+
                 </section>
-                <section id="login-section">
-                    <form id="login-form" class="d-flex-column" method="#">
-                        <label class="login-label" for="username">USERNAME/EMAIL</label>
-                        <input id="username" class="login-input" name="username" type="text"/>
-                        <label class="login-label" for="password">PASSWORD</label>
-                        <input id="password" class="login-input" name="password" type="password">
-                        <input class="form-btn btn-mar-tb-1 btn-pad-tb-1" class="form-input" type="submit" value="submit">
-                    </form>
-                </section>
+
             </main>
 
-        </div>
-        <!--FOOTER CONTENT-->
-        <footer>
-            <section id="footer-container" class="d-flex-column a-items-center">
-                <h3 id="footer-text">Get Last Offers!</h3>
-                <form action="post" class="d-flex mail-journal">
-                    <input type="email" name="e-mail" placeholder="type your e-mail">
-                    <input class="form-btn btn-pad-rl-1"  type="submit" value="submit">
-                </form>
-                <nav id="footer-nav" class="d-flex">
-                  <!-- <h2 style="text-align: center;">SOCIAL</h2> -->
-                  <ul id="social-medias" class="social-medias d-flex">
-                      <li>
-                          <a href="#" class="d-flex content-items-center">Instagram 
-                              <i class="fa-brands fa-instagram ins-footer"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" class="d-flex content-items-center">WhatsApp 
-                              <i class="fa-brands fa-whatsapp"></i>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" id="ttok" class="d-flex content-items-center">TikT<span class="p-relative" id="letter-effect">o</span>k
-                              <i class="fa-brands fa-tiktok" id="tiktok"></i>
-                          </a>
-                      </li>
-                  </ul>
-                </nav>
-            </section>
-        </footer>
+            <!--MAIN CONTENT-->
 
-          <!--FOOTER CONTENT-->
+            <!--FOOTER CONTENT-->
+
+            <footer>
+
+                <section id="footer-container" class="d-flex-column a-items-center">
+
+                    <nav id="footer-nav">
+
+                      <ul id="social-medias" class="social-medias d-flex">
+
+                          <li>
+                              <a href="#" class="d-flex content-items-center">Instagram 
+                                  <i class="fa-brands fa-instagram ins-footer"></i>
+                              </a>
+                          </li>
+
+                          <li>
+                              <a href="#" class="d-flex content-items-center">WhatsApp 
+                                  <i class="fa-brands fa-whatsapp"></i>
+                              </a>
+                          </li>
+                          
+                          <li>
+                              <a href="#" class="d-flex content-items-center">TikT<span class="p-relative" id="letter-effect">o</span>k
+                                  <i class="fa-brands fa-tiktok" id="tiktok"></i>
+                              </a>
+                          </li>
+                          
+                      </ul>
+
+                    </nav>
+
+                </section>
+
+            </footer>
+
+            <!--FOOTER CONTENT-->
+
+        </div>
+
+        <!--PAGE WRAPPER-->
 
         <script>
             const path = window.location.pathname;
@@ -124,7 +172,7 @@
             const signIn = document.getElementById('signin');
             const signUp = document.getElementById('signup');
             
-            if (path.includes('login')) {
+            if (path.includes('signin')) {
               signIn.classList.add('active');
             } else if (path.includes('signup')) {
               signUp.classList.add('active');

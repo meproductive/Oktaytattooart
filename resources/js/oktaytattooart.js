@@ -15,7 +15,6 @@ const intro = document.getElementById('introVideo');
         turnOnButton.style.display = 'flex';
     });
 
-
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
     const prevButton = document.getElementById('left');

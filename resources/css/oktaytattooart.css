@@ -13,8 +13,12 @@ html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, th, td, label, button, a, blockquote, strong {
+h1, h2, h3, h4, h5, h6, p, th, td, label, button, a, blockquote, strong, input[type="submit"], input[type="file"] {
     color: rgb(255, 255, 255);
+}
+
+h2 {
+    text-align: center;
 }
 
 a {
@@ -90,6 +94,76 @@ a {
     to {opacity: 1;}
 }
 
+/* Sign in, Sign up and Admin layout styling */
+
+/* dark bg to cover viewport */
+.full-page-layout {
+    min-height: 100vh;
+    flex-direction: column;
+}
+/* dark bg to cover viewport height */
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+/* form items */
+
+form {
+    gap: 1rem;
+}
+
+form,
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-container {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+}
+
+label {
+    padding: 0.8rem 0 0.8rem 0.5rem;
+}
+
+input {
+    padding: 5px 0 5px 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* primary button */
+.btn-primary {
+    width: 100%;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.btn-primary:active {
+    box-shadow: inset 1px 1px 0 0 #fff !important; 
+    transform: translateX(-2px) !important;  
+}
+
+/* button 3D effect */
+.button3D {
+    border-top: none;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: none;
+    box-shadow: inset 3px 3px 0px 0px #fff;
+    background-color: #000;
+}
 
 /* ----------------- G L O B A L - T A G S ----------------- */
 
@@ -115,17 +189,15 @@ a {
 
 /* ----------------- O U T E R - D I V - W R A P P E R S ----------------- */
 
-/* #hero, main, footer wrapper*/
+/* #hero, main and footer wrapper */
 #page-content {
     z-index: 1;
 }
 
-/* aside, header, intro outer wrapper */
+/* aside, header and intro wrapper */
 #hero {
     height: 100vh;
 }
-
-/* appoinment page*/
 
 /* ----------------- O U T E R - D I V - W R A P P E R S ----------------- */
 
@@ -302,8 +374,6 @@ a {
 
 /* ----------------- V I D E O - O V E R L A Y - C O N T E N T - S E C T I O N ----------------- */
 
-/* F I R S T - S E C T I O N - I N T R O - S T A R T */
-
 #intro {
     width: 100%;
     height: 100vh;
@@ -416,7 +486,7 @@ a {
     display: none;
 }
 
-/* M E D I A - Q U E R I E S */
+/* V I D E O - O V E R L A Y - R E S P O N S I V E */
 
 @media only screen and (orientation: landscape) {
     .sound-icon {
@@ -443,9 +513,9 @@ a {
     }
 }
 
-/* M E D I A - Q U E R I E S */
+/* V I D E O - O V E R L A Y - R E S P O N S I V E */
 
-/* F I R S T - S E C T I O N - I N T R O - E N D */
+/* ----------------- V I D E O - O V E R L A Y - C O N T E N T - S E C T I O N ----------------- */
 
 /* ----------------- B R E A K P O I N T - S I X ----------------- */
 
@@ -786,6 +856,7 @@ main {
 }
 
 /* C A R O U S E L - R E S P O N S I V E */
+
 @media (min-width: 471px) {
     .carousel-item {
       flex: 0 0 50%; /* Optionally show 2 with peeking */
@@ -797,6 +868,7 @@ main {
       flex: 0 0 33.3333%;
     }
   }
+
 /* C A R O U S E L - R E S P O N S I V E */
 
 /* S I X T H - S E C T I O N - C A R O U S E L - C O N T A I N E R - E N D */
@@ -876,16 +948,8 @@ footer {
     background-color: rgba(0, 0, 0, 1);
 }
 
-#footer-container {
+#footer-container { 
     padding: 2rem 0rem;
-}
-
-#footer-text {
-    font-size: 1.5em;
-}
-
-#footer-nav {
-    margin: 1rem 0 0 0;
 }
 
 #social-medias li {
@@ -941,37 +1005,36 @@ footer {
     transform: translate(0.5px, 0.5px); 
 } 
 
-.mail-journal {
-    margin: 1rem auto;
+@-moz-document url-prefix() {
+    #tiktok, #letter-effect {
+        filter: none;
+        text-shadow: 
+            -0.5px -0.5px 0 #24f6f0,
+            0.5px 0.5px 0 #F50057;
+    }
 }
 
-.mail-journal input[type=email] {
-    outline: none;
-    background-color: #000;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 0 0.5rem 0 0;
-    color: #fff;
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+        #tiktok, #letter-effect {
+            filter: none;
+            text-shadow: 
+                -0.5px -0.5px 0 #24f6f0,
+                0.5px 0.5px 0 #F50057;
+        }
+    }
 }
 
-.mail-journal input[type=email]:focus {
-    outline: none;
-}
+/* @supports not (filter: drop-shadow(0.5px 0.5px 0 red)) or (-moz-appearance: none) {
+    #tiktok, #letter-effect {
+        filter: none;
+        text-shadow: 
+            -0.5px -0.5px 0 #24f6f0,
+            0.5px 0.5px 0 #F50057;
+    }
+} */
 
-.mail-journal button {
-    padding: 1rem;
-    border: 1px solid #fff;
-    box-shadow: inset 2px 2px 0 0;
-    background-color: #000;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.mail-journal button:active {
-    box-shadow: inset 0.5px 0.5px 0 0;
-    transform: translateX(-2px);
-}
+/* F O O T E R - R E S P O N S I V E */
 
 @media (max-width: 768px) {
     #social-medias {
@@ -981,7 +1044,14 @@ footer {
     #social-medias li a i {
         float: right;
     }
+
+    #tiktok {
+        position: relative;
+        right: -1.05rem;
+    }
 }
+
+/* F O O T E R - R E S P O N S I V E */
 
 /* ----------------- F O O T E R - E N D ----------------- */
 
@@ -993,33 +1063,18 @@ footer {
     padding: 0 0 2rem 0;
 }
 
-#appointment-section form {
-    width: 500px;
-    max-width: 600px;
-    width: 100%;
+#personal-info-first {
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    padding: 0 0 0.625rem 0;
 }
 
-#appointment-section form div article h2 {
+#personal-info-first h2 {
     flex-basis: 100%; 
     order: -1; 
-    text-align: center;
     font-weight: 300;
     font-size: 1.5em;
     margin: 0 0 1rem 0;
-}
-
-.preserved-container {
-    width: 100%;
-    border: 1px solid #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 0 0 2rem 0;
-}
-
-#personal-info-first {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0 0 10px 0;
 }
 
 #personal-info-first input {
@@ -1027,47 +1082,18 @@ footer {
     width: calc(50% - 5px);
 }
 
-#personal-info-second {
-    padding: 10px 0 10px 0;
-    gap: 10px
-}
-
-#choices {
-    gap: 10px;
+#personal-info-first label {
+    padding: 0 0 0 0.5rem;
+    align-self: center;
 }
 
 #choices select {
     padding: 5px 0;
 }
 
-#choices input[type="file"] {
-    color: #fff;
-}
-
 #describe {
     resize: none;
     padding: 5px 0 0 5px;
-}
-
-#appointment-date label {
-    padding: 15px 0 15px 5px;
-}
-
-.form-label {
-    padding: 5px 0 5px 5px;
-}
-
-.form-input {
-    font-size: 18px;
-    padding: 5px 0 5px 5px;
-    border-radius: 5px;
-    border: none;
-    color: #000;
-}
-
-.form-input:focus::placeholder {
-    opacity: 0;
-    transition: opacity 0.5s;
 }
 
 input.flatpickr {
@@ -1076,22 +1102,6 @@ input.flatpickr {
 
 .flatpickr {
     width: 100%;
-}
-
-.form-btn {
-    width: 100%;
-    border: 1px solid #fff;
-    box-shadow: inset 2px 2px 0 0;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.form-btn:active {
-    box-shadow: inset 0.5px 0.5px 0 0;
-    transform: translateX(-2px);
 }
 
 .calendar-icon {
@@ -1103,97 +1113,293 @@ input.flatpickr {
 
 /* A P P O I N T M E N T - R E S P O N S I V E */
 
-@media (max-width: 768px) {
-    #appointment-section {
-        padding: 0 10px;
-    }
-}
-
 @media (max-width: 650px) {
     #personal-info-first {
         flex-direction: column;
+        padding: 0;
+        gap: 0;
     }
 
     #personal-info-first input {
         width: 100%;
     }
+
+    #personal-info-first label {
+        padding: 0.8rem 0 0.8rem 0.5rem;
+        align-self: self-start;
+    }
 }
+
+/* A P P O I N T M E N T - R E S P O N S I V E */
 
 /* ----------------- A P P O I N T M E N T - P A G E - E N D ----------------- */
 
 /* ----------------- B R E A K P O I N T - F O U R T E E N ----------------- */
 
-/* ----------------- L O G I N - S I G N U P ----------------- */
+/* ----------------- S I G N I N & S I G N U P - S T A R T ----------------- */
 
-#login-body {
-    height: 100%;
+.user-section {
+    margin: 2rem 0;
 }
 
-.custom-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.user-section form label {
+    padding: 0;
 }
 
-#login-main {
-    flex-grow: 1;
-}
-
-#login-section {
-    max-width: 600px;
+/* form navigation */
+.anchor-section {
     width: 100%;
-    padding: 0 1rem;
-}
-
-#login-form {
-    padding: 1rem 3rem;
-    border: 1px solid #fff;
-    border-radius: 10px;
-}
-
-.login-label {
-    padding: 1rem 0 1rem 0.2rem;
-}
-
-.login-input {
-    padding: 0.4rem;
-}
-
-.btn-pad-rl-1 {
-    padding: 0 1rem;
-}
-
-.btn-mar-tb-1 {
-    margin: 1rem 0;
-}
-
-.btn-pad-tb-1 {
-    padding: 0.5rem 0;
-}
-
-#anchor-section {
-    max-width: 600px;
-    width: 100%;
-    padding: 0 1rem;
-}
-
-#anchor-form {
-    gap: 10px;
     padding: 0.3rem;
+    gap: 10px;
 }
 
-#anchor-form a {
+.anchor-section a {
     margin: auto;
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-    background-color: #000;
-    border: 1px solid #fff;
     border-radius: 5px;
-    box-shadow: inset 2px 2px 0px 0;
 }
 
 .nav-link.active {
-    box-shadow: inset 0.5px 0.5px 0 0 #000 !important; 
+    box-shadow: inset 1px 1px 0 0 #fff !important; 
     transform: translateX(-2px) !important;   
 }
+
+#forgot-password-container {
+    align-self: flex-end;
+}
+
+#account-link {
+    text-align: center;
+}
+
+#account-link a,
+#forgot-password-container a {
+    text-decoration: underline;
+}
+
+#signingoogle {
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 1rem 0;
+}
+
+/* ----------------- S I G N I N & S I G N U P - S T A R T ----------------- */
+
+/* ----------------- B R E A K P O I N T - F I F T E E N ----------------- */
+
+/* ----------------- U P L O A D - I M A G E - S T A R T ----------------- */
+
+#uploadimage-form {
+    width: 90%;
+    padding: 2rem 0;
+}
+
+#uploadimage-form label {
+    align-self: flex-start;
+}
+
+#uploadimage-form input {
+    width: 100%;
+}
+
+#panel-subtitle {
+    padding: 2rem 0;
+    font-size: 2.3em;
+}
+
+#set-category {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0 0 3rem 0;
+}
+
+#img-container,
+.upload-image {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+#img-container {
+    width: 100%;
+    height: 400px;
+    /* -webkit-backdrop-filter: blur(5px); */
+}
+
+.upload-image {
+    margin: 2rem auto;
+    /* -webkit-backdrop-filter: blur(5px); */
+}
+
+.upload-image label {
+    align-self: center;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.upload-image label i {
+    padding-left: 0.3rem;
+}
+
+#upload-photo {
+    display: none;
+}
+
+
+/* ----------------- U P L O A D - I M A G E - E N D ----------------- */
+
+/* ----------------- B R E A K P O I N T - S I X T E E N ----------------- */
+
+/* ----------------- C U S T O M E R - A P P O I N T M E N T - L I S T - S T A R T ----------------- */
+
+#customer-list-section,
+#appointment-list-section {
+    overflow-x: auto;
+    place-items: center;
+}
+
+#appointment-table,
+#customer-table {
+    border-collapse: separate;
+    border-spacing: 10px 12px; 
+}
+
+.table-th, .table-td {
+    padding: 1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+#app-link {
+    text-decoration: underline;
+}
+
+/* ----------------- C U S T O M E R - A P P O I N T M E N T - L I S T - E N D ----------------- */
+
+/* ----------------- B R E A K P O I N T - S E V E N T E E N ----------------- */
+
+/* ----------------- C R E A T E - C A T E G O R Y - S T A R T ----------------- */
+
+#create-category {
+    width: 90%;
+}
+ 
+#name-container {
+    padding: 1rem 0;
+}
+
+/* ----------------- C R E A T E - C A T E G O R Y - S T A R T ----------------- */
+
+/* ----------------- B R E A K P O I N T - E I G H T E E N ----------------- */
+
+/* ----------------- T A T T O O - B L O G - S T A R T ----------------- */
+
+#blog-subtitle {
+    font-family: "Noto Serif Display", serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 6rem);
+    animation: fadeIn 1s forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+#blog-subtitle strong {
+    font-family: "Carattere", cursive;
+    font-size: clamp(3rem, 5vw, 7rem);
+}
+
+#blog-image-content {
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+    width: clamp(330px, 60vw, 1200px);
+    margin: 2rem 7%;
+    justify-self: center;
+}
+
+#image-container {
+    top: 0;
+    left: 0;
+}
+
+#blog-image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+#text-b {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(221, 194, 138, 0.1);
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+    line-height: 1.2;
+    text-shadow: 0 0 10px #000;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+    color: rgb(153, 0, 0);
+    font-family: "Noto Serif Display", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 9rem);
+}
+
+.hero-text h1:last-child {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.fade-top.delay-1 { animation-delay: 0.5s; }
+.fade-top.delay-2 { animation-delay: 1.5s; }
+.fade-left.delay-3 {
+    transform: translateX(-20px);
+    animation-name: fadeInLeft;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.blog-article {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 1rem 5rem;
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.blog-article h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f5f5f5;
+}
+
+/* ----------------- T A T T O O - B L O G - E N D ----------------- */

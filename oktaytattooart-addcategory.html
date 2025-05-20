@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="resources/css/oktaytattooart.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        
+        <!--FONTS-->
+
+        <!-- ROBOTO -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <!-- PRATA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+        
+        <!-- JAVASCRIPT -->
+        <script src="resources/js/oktaytattooart-root.js" defer></script>
+
+        <title>OktayTattooArt</title>
+    </head>
+
+    <body>
+
+        <!--BACKGROUND SKULL IMAGE-->
+        <div id="custom-background" class="wh-100"></div>
+
+        <!--PAGE WRAPPER-->
+
+        <div id="page-content" class="full-page-layout d-flex p-relative">
+            
+            <!--HEADER WRAPPER-->
+
+            <div class="d-flex-column">
+
+                <!--HEADER NAVIGATION-->
+
+                <header id="header" class="d-flex a-items-center" style="background-color: rgba(0, 0, 0, 0.9);">
+
+                    <h1 id="main-title"><strong>oktaytattooart</strong></h1>
+                    
+                    <nav id="navigation" class="opacity-animation" role="navigation" aria-label="main-navigation">
+
+                        <ul id="menu" class="d-flex">
+
+                            <li><a href="oktaytattooart-uploadimage.html">Add Image</a></li>
+                            <li><a href="oktaytattooart-customerlist.html">Customer List</a></li>
+                            <li><a href="oktaytattooart-appointmentlist.html">Appointments</a></li>
+                            <li><a href="oktaytattooart-addcategory.html">Add Category</a></li>
+                            <li><a href="oktaytattooart-signin.html"><i class="fa-solid fa-user"></i></a></li>
+                            
+                        </ul>
+
+                    </nav>
+
+                    <i id="menu-btn" class="a-items-center"><span id="hamburger-menu"></span></i>
+
+                </header>
+
+                <!--HEADER NAVIGATION-->
+                
+            </div>
+
+            <!--HEADER WRAPPER-->
+
+            <!--MAIN CONTENT-->
+
+            <main class="add-photo-main d-flex content-items-center flex-grow-1">
+            
+                <!-- Manage Gallery Section -->
+    
+                <section id="uploadimage-section" class="container d-flex-column content-items-center">
+
+                    <h2 id="panel-subtitle">Create a category</h2>
+
+                    <form id="create-category" class="d-flex-column" method="#">
+
+                        <div id="name-container" class="wall d-flex-column">
+
+                            <label for="categoryname">Category name</label>
+                            <input id="categoryname" type="text" for="categoryname">
+
+                        </div>
+
+                        <input class="btn-primary button3D" type="submit" value="Create"/>
+
+                    </form>
+
+                </section>
+    
+            </main>
+
+            <!--MAIN CONTENT-->
+
+        </div>
+
+        <!--PAGE WRAPPER-->
+
+    </body>
+
+</html>
